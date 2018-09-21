@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+   <link href="https://fonts.googleapis.com/css?family=Palanquin Dark" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!--    <link rel="stylesheet" href="css/style.css"> -->
+   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!--   <script src="jquery-3.3.1.min.js"></script> -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style>
+
+* {
+    font-family: Calibri;
+}
+body {
+padding: 0;
+margin: 0;
+background-color: #FFF;
+}
+
+
+
+
+.header {
+    background-color: #65ccb8;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    
+}
+
+.header2 {
+    background-color: #3b945e;
+    text-align: center;
+    color: black;
+    padding: 0.5px;
+    width: 76%;
+    left: ;
+    right: ;
+    border-color: black;
+    border : 10%;
+    float: right;
+}
+
+#list{
+  background-color: #182628;
+  border: 1px solid #182628;
+
+}
+ul {
+
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  /*  position: -webkit-sticky; /* Safari */
+   /* position: sticky;*/
+    top: 0;
+    
+   /* background-color: #182628;*/
+
+}
+
+li {
+    float: right;
+    /*background-color: #182628;*/
+   
+}
+
+li a, .dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+
+
+.active {
+    background-color: #57ba98;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+    background-color: #57ba98;
+}
+
+li.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    border: 1px solid #e7e7e7;
+    background-color: #ABD1D9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+
+       background-color: #D9FFF7;
+}
+
+.dropdown:hover .dropdown-content {
+    
+    display: block;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+}
+
+
+
+.img{
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+   
+
+
+}
+
+
+.container:hover .image {
+  opacity: 0.3;
+}
+
+.container:hover .middle {
+
+  opacity: 1;
+}
+
+
+
+
+
+.container1, .container2 {
+    position: absolute;
+    left:300;
+    right:300;
+    height:400px; /* based on screen size */
+}
+.container1 {
+    top: 0;
+}
+.container2 {
+    bottom: 0;
+}
+
+
+/* Create three equal columns that floats next to each other */
+.column {
+  
+    float: left;
+    padding: 10px;
+    margin: 10px;
+    height: 600px;
+
+}
+
+.left, .right {
+  width: 20%;
+  height: 660px;
+  background: repeating-linear-gradient(to right, #57ba98, #57ba98 90%, #fff 10%, #Fff 100%);;
+}
+
+.middle {
+  width: 35%;
+}
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width:600px) {
+    .column {
+        width: 100%;
+    }
+}
+
+
+
+.meter { 
+  height: 20px;  /* Can be anything */
+  position: relative;
+  background: #000000;
+  -moz-border-radius: 25px;
+  -webkit-border-radius: 25px;
+  border-radius: 25px;
+  padding: 10px;
+  box-shadow: inset 0 -1px 1px rgba(255,255,255,0.3);
+}
+
+
+.meter > span {
+  display: block;
+  height: 100%;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  background-color: #3B945E;
+  background-image: linear-gradient(
+    center bottom,
+    rgb(43,194,83) 37%,
+    rgb(84,240,84) 69%
+  );
+  box-shadow: 
+    inset 0 2px 9px  rgba(255,255,255,0.3),
+    inset 0 -2px 6px rgba(0,0,0,0.4);
+  position: relative;
+  overflow: hidden;
+}
+
+
+.notifications {
+      position: absolute;
+      border-radius:2px;
+      font-size:14px;
+      background-color:red;
+      color:#fff;
+      padding:2px 5px;
+      top:145px;
+      right:2px;
+    }
+
+
+.badge1 {
+   position:relative;
+}
+
+
+
+.badge1[data-badge]:after {
+   content:attr(data-badge);
+   position:absolute;
+   top:-30px;
+   right:-15px;
+   font-size:.7em;
+   background:green;
+   color:white;
+   width:18px;height:18px;
+   text-align:center;
+   line-height:18px;
+   border-radius:50%;
+   box-shadow:0 0 1px #333;
+}
+
+
+progress {
+       text-align: center;
+ }
+
+progress:after {
+ background-color: #fff;
+  content: attr(value)'%';
+}
+
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+
+
+.month {
+    padding: 30px 25px;
+    width: 100%;
+    background: #65ccb8;
+    text-align: center;
+     box-sizing: border-box;
+}
+
+.month ul {
+    margin: 0;
+    padding: 0;
+     box-sizing: border-box;
+}
+
+.month ul li {
+    color: white;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+  text-align: center;
+   box-sizing: border-box;
+}
+
+.month .prev {
+    float: left;
+    padding-top: 10px;
+     box-sizing: border-box;
+}
+
+.month .next {
+    float: right;
+    padding-top: 10px;
+     box-sizing: border-box;
+}
+
+.weekdays {
+  box-sizing: border-box;
+    margin: 0;
+    padding: 10px 0;
+    background-color: #ddd;
+}
+
+.weekdays li {
+  box-sizing: border-box;
+    display: inline-block;
+    width: 13.6%;
+    color: #666;
+    text-align: center;
+}
+
+.days {
+  box-sizing: border-box;
+    padding: 10px 0;
+    background: #eee;
+    margin: 0;
+}
+
+.days li {
+  box-sizing: border-box;
+    list-style-type: none;
+    display: inline-block;
+    width: 13.6%;
+    text-align: center;
+    margin-bottom: 5px;
+    font-size:12px;
+    color: #777;
+}
+
+.days li .active {
+  box-sizing: border-box;
+    padding: 5px;
+    background: #65ccb8;
+    color: white !important
+}
+
+/* Add media queries for smaller screens */
+@media screen and (max-width:720px) {
+    .weekdays li, .days li {width: 13.1%;}
+}
+
+@media screen and (max-width: 420px) {
+    .weekdays li, .days li {width: 12.5%;}
+    .days li .active {padding: 2px;}
+}
+
+@media screen and (max-width: 290px) {
+    .weekdays li, .days li {width: 12.2%;}
+}
+
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Course Registration System</h1>
+  <h3>Military Institute Of Science and Technology</h3>
+</div>
+
+<ul id="list">
+ <li><a  href="/" id="signout">Logout</a></li>
+<li><a href="/head/settings">Settings</a></li>
+  
+  <li   class="dropdown"> <a href="/head/notification">Notifications<div class="badge1" data-badge="3"></div></a>
+    
+    <div class="dropdown-content">
+     <a >Student A sent Payment slip.</a>
+      <a >Student B send Registration form</a>
+      <a >Student c send Payment slip.</a>
+      <a  href="/head/notification" style="size: 0.5px">See more</a>
+    </div>
+    </li>
+    <li><a class="active" href="/head/profile">Profile</a></li>
+
+</ul>
+
+  
+
+
+
+
+
+<div class="header2">
+  <h3>Head's Profile</h3>
+
+</div>
+<div class="row">
+
+  <div class="column left"  style="height: 40%; width: 20%; margin-right: 3%;">
+       <div class="container" style="background-color: #f9f3e0">   </div>
+     <div class="container">
+  <img src="https://cdn.glitch.com/efef55df-8d3e-41df-b228-aa6fff9a4f95%2FHead.jpg?1527511524361" alt="Avatar" class="img" style="width:90%; border-radius: 2%">
+     </div>
+  
+
+<br><br><br>
+
+<div class="month">      
+  <ul class="month">
+
+    <li style="position:relative;right:50px">
+       May<br>
+      <span style="font-size:14px">2018</span>
+    </li>
+  </ul>
+</div>
+
+<ul class="weekdays">
+  
+  <li>Mo</li>
+  <li>Su</li>
+  <li>Sa</li>
+  <li>Fr</li>
+  <li>Thu</li>
+  <li>Wed</li>
+  <li>Tu</li>
+</ul>
+
+<ul  class="days">  
+  <li style="float:left">1</li>
+  <li style="float:left">2</li>
+  <li style="float:left">3</li>
+  <li style="float:left">4</li>
+  <li style="float:left">5</li>
+  <li style="float:left">6</li>
+  <li style="float:left">7</li>
+  <li style="float:left">8</li>
+  <li style="float:left">9</li>
+  <li style="float:left">10</li>
+  <li style="float:left">11</li>
+  <li style="float:left">12</li>
+  <li style="float:left">13</li>
+  <li style="float:left">14</li>
+  <li style="float:left">15</li>
+  <li style="float:left">16</li>
+  <li style="float:left">17</li>
+  <li style="float:left">18</li>
+  <li style="float:left">19</li>
+  <li style="float:left">20</li>
+  <li style="float:left">21</li>
+  <li style="float:left">22</li>
+  <li style="float:left">23</li>
+  <li style="float:left">24</li>
+  <li style="float:left">25</li>
+  <li style="float:left">26</li>
+  <li style="float:left">27</li>
+  <li style="float:left">28</li>
+  <li style="float:left"><span class="active">29</span></li>
+  <li style="float:left">30</li>
+  <li style="float:left">31</li>
+</ul>
+
+
+
+
+
+
+
+
+ 
+
+
+
+</div>
+
+  <div class="column middle"  style="background-color: #f9f3e0">
+
+
+  <div class="container" >
+  <div class="row">
+   <h1 style="position:relative left:30px;"><b>Personal Information</b></h1>
+
+  <br><br>
+  
+
+
+ <div class="column" style="width: 28%; font-weight: bold; background-color: #fff; height: 20%;font-size:1.4em ">
+ <label for="fullname">Full Name  </label> <br>
+   <label for="rank">Rank  </label> <br>
+          <label for="id">Mist ID No </label> <br>
+     <label for="Email">Email </label> <br>
+   <label for="firstname">Date of Birth </label> <br>
+     <label for="joiningdate">Joining Date </label> <br>
+   <label for="firstname">Joining Dept </label> <br>
+   <label for="Gender">Gender </label> <br>
+  </div>
+
+
+
+  <div class="column" style="width: 60%; background-color: #ABD1D9; height: 20%;font-size:1.4em ">
+  <label for="fullname">Md Afzal Hossain</label> <br>
+   <label for="rank">Air Commodore</label> <br>
+    <label for="id">A-111</label> <br>
+      <label for="Email">afzal@cse.mist.ac.bd</label> <br>
+ <label for="roll">1960, 01 January, Tuesday</label><br>
+   <label for="roll"> 2005, 27 January</label> <br> 
+           <label for="roll">Computer Science And Engineering</label>  <br>
+            <label for="Gender">Male</label> <br>
+
+
+
+</div>
+</div>
+ </div>
+
+
+  
+ </div>
+
+
+   <div class="column middle"  style="background-color: #f9f3e0; margin-left: 2%;" >
+    <h1 style="margin-bottom: 10%;"><b>Summary</b></h1>
+    
+       <p style = "font-size: 20px" >Registration completion of CSE students</p>
+<!--        <div class="meter">
+  <span style="width: 100% ; background: #30415D" id="bar"></span>
+</div> -->
+    <div class="progress" style="width:530px; border: 1px solid black;">
+    <div id="one" class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width:0%;background-color:#138D75">
+      
+    </div>
+    </div>
+      <p style= "font-size: 20px;" id="completed">
+        Progress : 0%
+    </p>
+        
+   
+  </div>
+</div>
+
+
+
+
+
+
+
+
+</body>
+  
+<script>
+  //var uname = "dummy";
+  checkHeadSession();
+  $(document).ready(function(){
+    
+      console.log("entered head profile");
+      checkHeadSession();
+      
+      $.ajax({
+          type : 'POST' ,
+          url: '/head/profile/badge',
+          success: function(data) {
+              console.log('success then badge = ');
+              console.log(data);
+              if (data.length == 0){
+                $(".badge1").hide();
+              }
+              else{
+                $('.badge1').attr("data-badge",data.length);
+              }
+          }
+      });
+    
+      $.ajax({
+          type : 'POST' ,
+          url: '/head/profile/progress',
+          success: function(data) {
+              console.log('success and data = ');
+              console.log(data);
+              var hoise = data.done;
+              var total = data.total;
+              $("#one").css("width", (hoise*530/total));
+              $("#completed").html('Progress : ' + (hoise*100/total).toFixed(2) + '%');
+          }
+      });
+      
+  });
+    ///Logout
+  
+  $("#signout").click(function(){
+    console.log("logout clicked");
+    localStorage.clear();
+    window.location.href = "/";
+  });
+  
+  ///head session check 
+  function checkHeadSession(){
+    var user = localStorage.getItem('myUserEntity');
+    user = JSON.parse(user);
+    if(user === null || user === '') {
+      window.location.href = "/";
+      return;
+    }
+    if (user.usertype != "head"){
+      window.location.href = '/' + user.usertype + '/profile';
+      return;
+    }
+  }     
+</script>
+</html>

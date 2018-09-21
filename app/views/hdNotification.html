@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!--   <script src="jquery-3.3.1.min.js"></script> -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+  
+<head>
+  <script src="/client.js"></script>
+<style>
+
+h1, h2, h3, h4, h5, h6, body{
+     font-family: , 'Arial',calibri, sans-sarif; 
+}
+
+
+* {
+    font-family: Arial;
+}
+
+body {
+padding: 0;
+margin: 0;
+}
+
+
+.header {
+    background-color: #65ccb8;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    
+}
+
+.header2 {
+    background-color: #3b945e;
+    text-align: center;
+    color: black;
+    padding: 0.5px;
+    width: 100%;
+    left: ;
+    right: ;
+    border-color: black;
+    border : 10%;
+    
+}
+ul {
+
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  /*  position: -webkit-sticky; /* Safari */
+  /*  position: sticky;  */
+    top: 0;
+    border: 1px solid #182628;
+    background-color: #182628;
+    
+}
+
+li {
+    float: right;
+    background-color: #182628;
+   
+}
+
+li a, .dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+
+
+.active {
+    background-color: #57ba98;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+    background-color: #57ba98;
+}
+
+li.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    border: 1px solid #e7e7e7;
+    background-color: #ABD1D9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+
+       background-color: #D9FFF7;
+}
+
+.dropdown:hover .dropdown-content {
+    
+    display: block;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+}
+
+
+
+.img{
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+   
+
+
+}
+
+
+.container:hover .image {
+  opacity: 0.3;
+}
+
+.container:hover .middle {
+
+  opacity: 1;
+}
+
+
+
+
+
+.container1, .container2 {
+    position: absolute;
+    left:300;
+    right:300;
+    height:400px; /* based on screen size */
+}
+.container1 {
+    top: 0;
+}
+.container2 {
+    bottom: 0;
+}
+
+
+/* Create three equal columns that floats next to each other */
+.column {
+  
+    float: left;
+    padding: 10px;
+    margin: 10px;
+    height: 800px;
+
+}
+
+.left, .right {
+  width: 20%;
+}
+
+.middle {
+  width: 35%;
+}
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width:600px) {
+    .column {
+        width: 100%;
+    }
+}
+
+
+
+.meter { 
+  height: 20px;  /* Can be anything */
+  position: relative;
+  background: #544E6E;
+  -moz-border-radius: 25px;
+  -webkit-border-radius: 25px;
+  border-radius: 25px;
+  padding: 10px;
+  box-shadow: inset 0 -1px 1px rgba(255,255,255,0.3);
+}
+
+
+.meter > span {
+  display: block;
+  height: 100%;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  background-color: #ABD1D9;
+  background-image: linear-gradient(
+    center bottom,
+    rgb(43,194,83) 37%,
+    rgb(84,240,84) 69%
+  );
+  box-shadow: 
+    inset 0 2px 9px  rgba(255,255,255,0.3),
+    inset 0 -2px 6px rgba(0,0,0,0.4);
+  position: relative;
+  overflow: hidden;
+}
+
+
+.notifications {
+      position: absolute;
+      border-radius:2px;
+      font-size:14px;
+      background-color:red;
+      color:#fff;
+      padding:2px 5px;
+      top:145px;
+      right:2px;
+    }
+
+
+.badge1 {
+   position:relative;
+}
+
+
+
+.badge1[data-badge]:after {
+   content:attr(data-badge);
+   position:absolute;
+   top:-30px;
+   right:-15px;
+   font-size:.7em;
+   background:green;
+   color:white;
+   width:18px;height:18px;
+   text-align:center;
+   line-height:18px;
+   border-radius:50%;
+   box-shadow:0 0 1px #333;
+}
+
+
+progress {
+       text-align: center;
+ }
+
+progress:after {
+ background-color: #fff;
+  content: attr(value)'%';
+}
+
+
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+
+
+
+
+
+ .container1 {
+ margin:20px auto; 
+ 
+}
+.panel {
+  overflow:hidden;
+}
+.btn-block {
+  padding:1em 0;
+  border-radius:0;
+  font-weight:700;
+  font-size:1.25em;
+}
+table, th, td {
+    border: 0.5px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 0.2px;
+    text-align: center;    
+}
+
+    /* The Modal (background) */
+    .modal {
+        max-height: calc(100vh - 210px);
+        overflow-y: auto;
+        overflow-x: auto;
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        padding-top: 10px; /* Location of the box */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    }
+
+    /* Modal Content */
+    .modal-content {
+        position: relative;
+        background-color: #fefefe;
+        margin: auto;
+        padding: 0;
+        border: 1px solid #888;
+        width: 100%;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+        -webkit-animation-name: animatetop;
+        -webkit-animation-duration: 0.4s;
+        animation-name: animatetop;
+        animation-duration: 0.4s
+    }
+
+    /* Add Animation */
+    @-webkit-keyframes animatetop {
+        from {top:-300px; opacity:0} 
+        to {top:0; opacity:1}
+    }
+
+    @keyframes animatetop {
+        from {top:-300px; opacity:0}
+        to {top:0; opacity:1}
+    }
+
+    /* The Close Button */
+    .close {
+        color: white;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    .modal-header {
+        padding: 2px 16px;
+        background-color: #5cb85c;
+        color: white;
+    }
+
+    .modal-body {padding: 2px 16px;}
+
+    .modal-footer {
+        padding: 2px 16px;
+        background-color: #5cb85c;
+        color: white;
+    }
+
+
+    .button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+.button:hover {
+    background-color: #5abc5e; /* Green */
+    color: white;
+}
+
+
+
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Course Registration System</h1>
+  <h3>Military Institute Of Science and Technology</h3>
+</div>
+
+<ul>
+  <li><a  href="/" id="signout">Logout</a></li>
+<li><a href="/head/settings">Settings</a></li>
+  
+  <li > <a class="active" href="/head/notification">Notifications<div class="badge1" data-badge="3"></div></a>
+    
+    
+    </li>
+    <li><a  href="/head/profile">Profile</a></li>
+
+</ul>
+
+  
+
+
+
+
+
+<div class="header2">
+  <h3>Notifications</h3>
+
+</div>
+
+
+<div class="row">
+<div class="w3-container">
+<!--   <h2>Students List</h2> -->
+  <h2 style="font-family: 'Palanquin Dark';">Unseen Notification List</h2>
+  <p></p>
+  <ul class="w3-ul w3-card-4" id="target">
+    <li class="w3-bar" style="background-color: #FFF">
+       
+      <img src="https://cdn.glitch.com/d36feb79-73de-425d-82a6-e60c09fbbcd4%2Fimg_avatar2.png?1525698470630" class="w3-bar-item w3-circle w3-hide-small" style="width:85px">
+      <div class="w3-bar-item">
+        <span class="w3-large">Student A</span><br>
+        <span>Click to see the course list</span>
+       
+         
+      </div>
+      <div style="float:right">
+
+
+       <!-- Trigger/Open The Modal -->
+<button class="button" id="myBtn1">See Registration Form</button>
+
+
+
+
+
+
+         
+    </div>
+           <p>Registartion Progress : </p>
+      <progress style="float:left" value="75" max="100"></progress>
+
+    </li>
+
+    <li class="w3-bar" style="background-color: #FFF">
+       
+      <img src="https://cdn.glitch.com/d36feb79-73de-425d-82a6-e60c09fbbcd4%2Fimg_avatar5.png?1525698470418" class="w3-bar-item w3-circle w3-hide-small" style="width:85px">
+      <div class="w3-bar-item">
+       <span class="w3-large">Student B</span><br>
+        <span>Click to see the course list</span>
+      </div>
+      <div style="float:right">
+
+       <!-- Trigger/Open The Modal -->
+<button class="button" id="myBtn2">See Registration Form</button>
+
+
+
+
+
+
+     </div>
+         <p>Registartion Progress : </p>
+
+      <progress style="float:left" value="75" max="100"></progress>
+    </li>
+  </ul>
+  <!--  Old Notifications  -->
+  <h2 style="margin-top: 5%; font-family: 'Palanquin Dark';">Old Notification List</h2>
+  <ul class="w3-ul w3-card-4" id="old"></ul>
+</div>
+</div>
+
+
+
+
+
+</body>
+  
+<script>
+  checkHeadSession();
+  $(document).ready(function() {
+        console.log("hdNotification");
+        var user = localStorage.getItem('myUserEntity');
+        user = JSON.parse(user);
+        var uname = user.username;
+        console.log("uname = " + uname);
+        
+        $.ajax({
+            type : 'POST' ,
+            url: '/head/notification?id=' + uname,
+            success: function(data) {
+                console.log('success');
+                console.log(data);
+                $('.badge1').attr("data-badge",data.length);
+                 $("#target").html('');
+                var unseen = 0;
+                if (data.length == 0){
+                  console.log("kisui bujhlam na");
+                  return;
+                }
+               
+                var len = data.length;
+                for (var i=len-1; i>=0; i--){
+                    var x = data[i];
+                    console.log(x);
+                    var sid = x.sid;
+                    var prog = 75;
+                    console.log(prog);
+                    var adv = x.advisor;
+                    
+                  if(x.seen == false){
+                    unseen++;
+                    $("#target").append(
+                        '<li class="w3-bar" style="background-color: #FFF">' + 
+'<img src="https://cdn.glitch.com/d36feb79-73de-425d-82a6-e60c09fbbcd4%2Fimg_avatar2.png?1525698470630" class="w3-bar-item w3-circle w3-hide-small" style="width:85px">' +
+                        '<div class="w3-bar-item">' + 
+                          '<span class="w3-large">' + 'Student ' + sid + '</span><br>' +
+                          '<span>'+ 'Form approved by ' + 'advisor '  + 'and student ' + 'has uploaded payslip' +'</span>' +
+                        '</div>'  +
+                        '<div style="float:right">' +
+
+                          '<button class="button" id="myBtn1" onclick="gotoSign(' + sid + ')">See Registration Form</button>' +
+                      '</div>' +
+           '<div style="margin-left: 50%;">' +
+           '<p>Registartion Progress : </p>' + 
+          '<progress style="float:left; " value="' + prog + '" max="100"></progress>' +
+              '</div>' +
+    '</li>'
+                        
+                    );
+                  }///end of x.seen == false
+                  else {
+                    $("#old").append(
+                        '<li class="w3-bar" style="background-color: #FFF">' + 
+'<img src="https://cdn.glitch.com/d36feb79-73de-425d-82a6-e60c09fbbcd4%2Fimg_avatar2.png?1525698470630" class="w3-bar-item w3-circle w3-hide-small" style="width:85px">' +
+                        '<div class="w3-bar-item">' + 
+                          '<span class="w3-large">' + 'Student ' + sid + '</span><br>' +
+                           '<span>'+ 'Form approved by ' + 'advisor '  + 'and student '  + 'has uploaded payslip' +'</span>' +
+                        '</div>'  +
+                        '<div style="float:right">' +
+
+                          '<button class="button" id="myBtn1" onclick="gotoSign(' + sid + ')">See Registration Form</button>' +
+                      '</div>' +
+              '<div style="margin-left: 50%;">' +
+           '<p>Registartion Progress : </p>' + 
+          '<progress style="float:left; " value="' + prog + '" max="100"></progress>' +
+              '</div>' +
+    '</li>'
+                        
+                    );
+                  }///end of else
+                }///end of loop
+                
+                ///ekhane seen korbo
+                console.log('nested ajax head notification');
+                $.ajax({
+                  type : 'POST' ,
+                  url: '/head/notification/seen',
+                  success: function(data) {
+                    console.log('success nested ajax')
+                    console.log(data);  
+                  }
+                }); 
+                $('.badge1').attr("data-badge",unseen);
+                if (unseen == 0){
+                  $("#target").append(
+                    '<div style="background-color: black;">' +
+                    '<p style="color: white; font-size: 1.8em; font-family: Petrona;"> No new notification </p>' +
+                    '</div>'
+                  );
+                }
+              
+            }///end of success function
+        });///end of ajax
+    });
+  
+    function gotoSign(sid){
+      localStorage.setItem('signid', sid);
+      window.location.href = "/head/sign?id=" + sid;
+    }
+    ///Logout
+  
+  $("#signout").click(function(){
+    console.log("logout clicked");
+    localStorage.clear();
+    window.location.href = "/";
+  });
+  
+  ///head session check 
+  function checkHeadSession(){
+    var user = localStorage.getItem('myUserEntity');
+    user = JSON.parse(user);
+    if(user === null || user === '') {
+      window.location.href = "/";
+      return;
+    }
+    if (user.usertype != "head"){
+      window.location.href = '/' + user.usertype + '/profile';
+      return;
+    }
+  }     
+</script>  
+  
+  
+</html>
+

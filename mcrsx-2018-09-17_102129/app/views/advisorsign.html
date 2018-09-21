@@ -1,0 +1,677 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  
+
+<style>
+ .txtbox
+    {
+     
+     height:150px;
+     width:90%;
+    }
+table, td, th {
+    border: 1px solid black;
+  text-align:center;
+}
+
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th {
+    height: 10%;
+}
+
+
+* {
+    font-family: Arial;
+}
+body {
+padding: 0;
+margin: 0;
+background-color: #FFF;
+}
+
+
+
+
+.header {
+    background-color: #6B7A8F;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    
+}
+
+.header2 {
+    background-color: #DCC7AA;
+    text-align: center;
+    color: black;
+    padding: 0.5px;
+    width: 100%;
+    left: ;
+    right: ;
+    border-color: black;
+    border : 10%;
+    
+}
+
+#list{
+  background-color: #F7882F;
+  border: 1px solid #F7882F;
+
+}
+ul {
+
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  /*  position: -webkit-sticky; /* Safari */
+   /* position: sticky;*/
+    top: 0;
+    
+   /* background-color: #F7882F;*/
+
+}
+
+li {
+    float: right;
+    /*background-color: #F7882F;*/
+   
+}
+
+li a, .dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+
+
+.active {
+    background-color: #F7C331;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+    background-color: #F7C331;
+}
+
+li.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    border: 1px solid #e7e7e7;
+    background-color: #ABD1D9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+
+       background-color: #D9FFF7;
+}
+
+.dropdown:hover .dropdown-content {
+    
+    display: block;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+}
+
+
+
+
+.notifications {
+      position: absolute;
+      border-radius:2px;
+      font-size:14px;
+      background-color:red;
+      color:#fff;
+      padding:2px 5px;
+      top:145px;
+      right:2px;
+    }
+
+
+.badge1 {
+   position:relative;
+}
+
+
+
+.badge1[data-badge]:after {
+   content:attr(data-badge);
+   position:absolute;
+   top:-30px;
+   right:-15px;
+   font-size:.7em;
+   background:green;
+   color:white;
+   width:18px;height:18px;
+   text-align:center;
+   line-height:18px;
+   border-radius:50%;
+   box-shadow:0 0 1px #333;
+}
+
+
+
+
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 40%;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.container {
+    padding: 2px 16px;
+}
+article {
+    position: relative;
+    top:  0px;
+    margin-left:50px;
+  margin-right:250px
+    border-left: 1px solid green;
+    padding: 1em;
+    overflow: hidden;
+  height:1550px;
+  width:1250px;
+  background-color:#f9f3e0;
+
+}
+.edit{
+    position: relative;
+    top:  20px;
+    left:220px;
+  right:240px
+    border-left: 1px solid green;
+    padding: 1em;
+    overflow: hidden;
+  height:100%;
+  width:800px;
+  background-color:white;
+  font-family: petrona;
+}
+#ed{
+    position: relative;
+    top:  20px;
+    left:0px;
+  right:0px
+    border-left: 1px solid green;
+    padding: 1em;
+    overflow: hidden;
+  height:90px;
+  width:800px;
+  
+}
+<--snackbar-->
+#snackbar {
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    font-size: 17px;
+}
+#snackbar1 {
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    font-size: 17px;
+  visibility:hidden;
+}
+
+#snackbar2 {
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    font-size: 17px;
+}
+#snackbar3 {
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    font-size: 17px;
+}
+#snackbar4 {
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    font-size: 17px;
+}
+#snackbar5 {
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    font-size: 17px;
+}
+
+#snackbar.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+#snackbar1.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+#snackbar2.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+#snackbar3.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+#snackbar4.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+#snackbar5.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+
+@-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;} 
+    to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;} 
+    to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
+</style>
+</head>
+
+<body>
+
+
+
+
+<div class="header2">
+  <h3>Student Form</h3>
+
+</div>
+
+
+
+
+<article>
+<div class="edit">
+<div  style="position:relative;top:15%;">
+                                    <label for="dep">
+                                        <b>Department:</b>
+                                    </label>&nbsp;<span id="sdept">A</span>
+              </div>
+  <br>
+<div>             
+<div style="position:relative;left:70%">
+                                    
+                              <img id="picture" src="https://cdn.glitch.com/d36feb79-73de-425d-82a6-e60c09fbbcd4%2Fimg_avatar2.png?1525698470630" alt="promawesome" height="40%" width="25%"/>
+                                </div>
+<br>
+<div style="position:relative;top:30%;">
+                        <label for="session">
+                           <b> Session:</b>
+                        </label>&nbsp;<span id="session">A</span>
+                        
+<span style="position:relative;left:100px">
+                            <label for="firstname">
+                                <b>Level:</b>
+                            </label>&nbsp;<span id="slevel">A</span>&nbsp;&nbsp;
+              <label for="firstname">
+                              <b>  Term:</b>
+                            </label>&nbsp;<span id="sterm">A</span>
+</span>
+</div>
+<br>
+<div>
+                        <label for="username">
+                            <b>Name of Student:</b>
+                        </label>
+                        &nbsp;<span id="sname">abc xyz</span>
+                    </div>
+          <br>
+                    <div>
+                        <label for="username">
+                           <b> Registration No:</b>
+                        </label>
+                       &nbsp;<span id="sreg">151411051234</span>
+                    </div>
+          <br>
+                    <div>
+                        <label for="username">
+                           <b> Roll No:</b>
+                        </label>
+                        &nbsp;<span id="sroll">201514031</span>
+                    </div>
+          <br>
+                    <label>
+                       <b> Previous Results (GPA):</b>
+                    </label>
+          <div>
+                    <table>
+            <tr>
+                <th colspan="2">
+                                    Level 1
+                                </th>
+                                <th colspan="2">
+                                    Level 2
+                                </th>
+                                <th colspan="2">
+                                    Level 3
+                                </th>
+                                <th colspan="2">
+                                    Level 4
+                                </th>
+            </tr>
+            <tr>
+                                <td>
+                                    Term 1
+                                </td>
+                                <td>
+                                    Term 2
+                                </td>
+                                <td>
+                                    Term 1
+                                </td>
+                                <td>
+                                    Term 2
+                                </td>
+                                <td>
+                                    Term 1
+                                </td>
+                                <td>
+                                    Term 2
+                                </td>
+                                <td>
+                                    Term 1
+                                </td>
+                                <td>
+                                    Term 2
+                                </td>
+                            </tr>
+              <tr>
+                                <td id="l1t1">
+                                    3.02
+                                </td>
+                                <td id="l1t2">
+                                   3.78
+                                </td>
+                <td id="l2t1">
+                                   3.81 
+                                </td>
+                <td id="l2t2">
+                                    3.90
+                                </td>
+                <td id="l3t1">
+                                    3.91
+                                </td>
+                <td id="l3t2">
+                                   3.91
+                                </td>
+                <td>
+                                    
+                                </td>
+                <td>
+                                    
+                                </td>
+                            </tr>
+              
+              
+           
+            
+
+
+          </table>
+
+          </div>
+
+</div>
+<br>
+                    <label>
+                       <b>Student's Course Choice:</b>
+                    </label>
+          <div id="courselist">
+          </div>
+<br>
+                    <label>
+                       <b>Total Credit Hour:</b>
+  </label><span id="scredit">21.5</span>
+          
+<br><br>
+                    <label>
+                       <b>Remarks:</b>
+                    </label>
+          <div >
+           <input  id="remarks" class="txtbox" type="text" placeholder="Write a feedback..." />
+          </div>
+   <br><br><br><br><br><br><br>
+<div id="signdiv" style="position:relative;left:80%">
+                                    
+                              <img id="adsign" src="https://cdn.glitch.com/d36feb79-73de-425d-82a6-e60c09fbbcd4%2FAdvisor_sign.png?1526928222225" alt="promawesome" height="20%" width="15%"/>
+
+                <p>Advisor's Signature</p>
+                        </div>
+   
+            <button id="ac" onclick="AcceptDecline('accept')" style="position:relative;top:95%;left:30%;background-color: #3b945e;color:white;border:0px;width:20%;height:5%;" > Accept</button>
+            <div id="snackbar1" class="hidden" style="background-color:black;color:white;height:50px;width:80px;text-align:center;opacity: 0.5;">Done</div>
+            <button id="dc" onclick="AcceptDecline('decline')" style="position:relative;top:95%;left:35%;background-color: #FF1919;color:white;border:0px;width:20%;height:5%;" > Decline</button>
+</div>
+
+
+
+</article>
+<script>
+  var urlParams;
+(window.onpopstate = function () {
+    var match,
+        pl     = /\+/g,  // Regex for replacing addition symbol with a space
+        search = /([^&=]+)=?([^&]*)/g,
+        decode = function (s) { return decodeURIComponent(s.replace(pl, " ")); },
+        query  = window.location.search.substring(1);
+
+    urlParams = {};
+    while (match = search.exec(query))
+       urlParams[decode(match[1])] = decode(match[2]);
+})();
+    $(document).ready( function(){
+      
+      $("#signdiv").hide();
+      var sid = urlParams.id;
+      console.log(sid);
+    
+       $.ajax({
+          type : 'POST' ,
+          url: '/student/registration/formfillup?id=' + sid,
+          success: function(data) {
+            
+            var cur = data[0];
+              // cur.result = JSON.parse(cur.result);
+              // cur.courses = JSON.parse(cur.courses);
+              //console.log(cur.result);
+              $("#sname").html(cur.name);
+              $("#sroll").html(cur.sid);
+              $("#sreg").html(cur.reg_no);
+              // $("#sdob").html(cur.dob);
+              // $("#scgpa").html(cur.cgpa);
+              $("#sdept").html(cur.dept);
+              $("#slevel").html(cur.level);
+              $("#sterm").html(cur.term);
+              $("#sbatch").html(cur.batch);
+              $("#session").html(cur.session);
+               $("#l1t1").html(cur.result[0][0]);
+              $("#l1t2").html(cur.result[0][1]);
+              $("#l2t1").html(cur.result[1][0]);
+              $("#l2t2").html(cur.result[1][1]);
+              $("#l3t1").html(cur.result[2][0]);
+              $("#l3t2").html(cur.result[2][1]);
+              $("#l4t1").html(cur.result[3][0]);
+              $("#l4t2").html(cur.result[3][1]);
+            $("#picture").attr("src", cur.photo);
+          
+        
+      
+      $.ajax({
+          type : 'POST' ,
+          url: '/advisor/sign?id=' + sid,
+          success: function(data2) {
+              console.log('advisor_sign');
+              console.log(data2);
+              var now = data2[0];
+              $("#scredit").html(now.credit);
+              var subs = now.courses;
+              for (var i=0; i<subs.length; i++){
+                $("#courselist").append(
+                  '<p>' + subs[i] + '</p>'
+                );
+              }
+            }
+        }); //ajax 2 end
+            
+          }//success 1 end
+       });///ajax1 end
+    
+    
+  });  
+  
+  function AcceptDecline(verdict){
+    var x = document.getElementById("snackbar1");
+    x.className = "show";
+    setTimeout(function(){ x.className = x.className.replace("show", "hidden"); }, 3000);
+    var user = localStorage.getItem('myUserEntity');
+      user = JSON.parse(user);
+      var uname = user.username;
+      console.log("uname = " + uname);
+    
+    if (verdict == "accept") {
+      $("#signdiv").show();
+    }
+    
+    var sid = urlParams.id;
+    var obj = {};
+    obj.sid = sid;
+    obj.advisor = uname;
+    obj.verdict = verdict;
+    obj.remarks = $('input#remarks').val();
+    obj.type = "advisor";
+    console.log(obj);
+    $.ajax({
+           type : 'POST' ,
+          url: '/signverdict?id=' + sid,
+          data : obj,
+          success: function(data) {
+            console.log(data);
+            //window.location.href = "/advisor/profile/?id=" + uname;
+          }
+    });
+  }
+  
+  function Decline(){
+    
+  }
+</script>
+
+</body>
+  </html>

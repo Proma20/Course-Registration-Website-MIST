@@ -1,0 +1,440 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
+  
+  
+      <link rel="stylesheet" href="css/style.css">
+
+
+<style>
+
+#headr{
+background-color:#6B7A8F;
+color:white;
+font-family:Helvetica;
+padding:20px;
+padding-left:0px;
+padding-right:0px;
+height: 180px;
+border-bottom: solid 2px #eee;}
+ 
+ 
+ select:focus {
+        min-width: 150px;
+        width: auto;
+ } 
+ 
+ #navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color:#F7882F;
+    position:relative; 
+    top:20px;
+}
+
+
+
+#image{
+   position: relative;
+   left: 10px;
+   top:  30px;
+ 
+    height: 244px;
+    width: 240px;
+	background-color:lightblue;
+
+}
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.navli {
+    float: right;
+}
+
+.notifi{
+    display: inline-block;
+    color: black;
+    text-align: center;
+    padding-top :14px;
+	padding-left:14px;
+	padding-right:0px;
+	padding-left:14px
+    text-decoration: none;
+	float: right;
+}
+
+li a {
+    display: inline-block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active){
+    background-color: #ddd;
+}
+
+li a.active {
+    color: white;
+    background-color:#F7C331;
+}
+
+
+nav {
+    position: relative;
+	top:0x;
+	background-color:#F7C331;
+    float: left;
+    max-width: 244px;
+    margin: 0;
+	height:1000px;
+    padding: 1em;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+	
+}
+   
+nav ul a {
+    text-decoration: none;
+}
+
+article {
+    position: relative;
+    top:  0px;
+    margin-left:300px;
+	margin-right:250px
+    border-left: 1px solid green;
+    padding: 1em;
+    overflow: hidden;
+	height:890px;
+	width:1000px;
+	background-color:#f9f3e0;
+}
+<--calender  -->
+* {box-sizing: border-box;}
+
+ .month {
+    padding: 30px 25px;
+    width: 100%;
+    background: #6B7A8F;
+    text-align: center;
+}
+
+.month ul {
+    margin: 0;
+    padding: 0;
+}
+
+.month ul li {
+    color: white;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+	text-align: center;
+}
+
+.month .prev {
+    float: left;
+    padding-top: 10px;
+}
+
+.month .next {
+    float: right;
+    padding-top: 10px;
+}
+
+.weekdays {
+    margin: 0;
+    padding: 8px 0;
+    background-color: #ddd;
+}
+
+.weekdays li {
+    display: inline-block;
+    width: 12%;
+    color: #666;
+    text-align: center;
+}
+
+.days {
+    padding: 8px 0;
+    background: #eee;
+    margin: 0;
+}
+
+.days li {
+    list-style-type: none;
+    display: inline-block;
+    width: 12%;
+    text-align: center;
+    margin-bottom: 5px;
+    font-size:12px;
+    color: #777;
+}
+
+.days li .active {
+    padding: 5px;
+    background: #6B7A8F;
+    color: white !important
+}
+
+/* Add media queries for smaller screens */
+@media screen and (max-width:720px) {
+    .weekdays li, .days li {width: 13.1%;}
+}
+
+@media screen and (max-width: 420px) {
+    .weekdays li, .days li {width: 12.5%;}
+    .days li .active {padding: 2px;}
+}
+
+@media screen and (max-width: 290px) {
+    .weekdays li, .days li {width: 12.2%;}
+}
+
+<-->
+
+@-webkit-keyframes myanimation {
+  from {
+    left: 0%;
+  }
+  to {
+    left: 50%;
+  }
+}
+h1 {
+  text-align: center;
+  font-family: 'PT Sans Caption', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  padding: 20px 0;
+  color: #777;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 40%;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.container {
+    padding: 2px 16px;
+}
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 80%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 10px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+	
+</style>
+</head>
+<body>
+
+<div id="headr">
+<h2 style="text-align:center;font-size:30px"><b>Online Course Registration</b></h2>
+<h4 style="text-align:center;">Military Institute of Science and Technology</h4>
+<ul id="navbar">
+  <li class="navli"><a href="#logout">Logout</a></li>
+  <li class="navli"><a href="g2settings.html">Settings</a></li>
+  <li class="notifi" class="dropdown">
+  <select name="slbox" style="color:black;background-color:#F7882F;width:130px;position:relative;left:-4px;top:0px;border:0px;" onchange="location = this.value;">
+<option value="" style="background-color:#f9f3e0;width:40px;">Offered Courses</option>
+<option value="g2profile.html#courselist"style="background-color:#f9f3e0;width:40px;">Level-1,Term-1</option>
+<option value="g2profile.html#courselist"style="background-color:#f9f3e0;width:40px;">Level-1,Term-2</option>
+<option value="g2profile.html#courselist"style="background-color:#f9f3e0;width:40px;">Level-2,Term-1</option>
+<option value="g2profile.html#courselist"style="background-color:#f9f3e0;width:40px;">Level-2,Term-2</option>
+<option value="g2profile.html#courselist"style="background-color:#f9f3e0;width:40px;">Level-3,Term-1</option>
+<option value="g2profile.html#courselist"style="background-color:#f9f3e0;width:40px;">Level-3,Term-2</option>
+<option value="g2profile.html#courselist"style="background-color:#f9f3e0;width:40px;">Level-4,Term-1</option>
+<option value="g2profile.html#courselist"style="background-color:#f9f3e0;width:40px;">Level-4,Term-2</option>
+</select>
+  </li>
+<li class="navli"><a class="active" href="g2profile.html">Profile</a></li>
+</ul>
+</div>
+
+
+<nav>
+  <div id="image">
+  <img src="http://www.personalbrandingblog.com/wp-content/uploads/2017/08/blank-profile-picture-973460_640-300x300.png"alt="promawesome" class="round" height="244px" width="240px">
+  <br><br><br>
+  <div class="month">      
+  <ul class="month">
+    <li class="prev">&#10094;</li>
+    <li class="next">&#10095;</li>
+    <li>
+       August<br>
+      <span style="font-size:14px;position:relative;left:30px">2017</span>
+    </li>
+  </ul>
+</div>
+
+<ul class="weekdays">
+  <li>Mo</li>
+  <li>Tu</li>
+  <li>We</li>
+  <li>Th</li>
+  <li>Fr</li>
+  <li>Sa</li>
+  <li>Su</li>
+</ul>
+
+<ul class="days">  
+  <li>1</li>
+  <li>2</li>
+  <li>3</li>
+  <li>4</li>
+  <li>5</li>
+  <li>6</li>
+  <li>7</li>
+  <li>8</li>
+  <li>9</li>
+  <li><span class="active">10</span></li>
+  <li>11</li>
+  <li>12</li>
+  <li>13</li>
+  <li>14</li>
+  <li>15</li>
+  <li>16</li>
+  <li>17</li>
+  <li>18</li>
+  <li>19</li>
+  <li>20</li>
+  <li>21</li>
+  <li>22</li>
+  <li>23</li>
+  <li>24</li>
+  <li>25</li>
+  <li>26</li>
+  <li>27</li>
+  <li>28</li>
+  <li>29</li>
+  <li>30</li>
+  <li>31</li>
+</ul>
+</nav>
+
+<div style="position:relative;padding-top:10px;padding-left:300px">
+<h1 style="position:relative;left:0px;width:1000px; color:#2F4F4F;background-color:#DCC7AA;font-size:25px"><b>G2 Academy Profile</b></h1>
+</div>
+
+</div>
+
+<article>
+  <h1 style="position:relative left:30px;"><b>General Information</b></h1>
+  <div class="card" style="width:100%;height:300px;">
+  <div class="container"> 
+  <br><br>
+  <table>
+  <tr>
+    <th>Name:</th>
+    <td>G2 Name</td>
+  </tr>
+  <tr>
+    <th>Employee ID:</th>
+    <td>00000000</td>
+  </tr>
+  <tr>
+    <th>Date of Birth:</th>
+    <td>1972, 10 June, Monday</td>
+  </tr>
+  <tr>
+    <th>Joining Date:</th>
+    <td>2011, 10 January</td>
+  </tr>
+  <tr>
+    <th>Department:</th>
+    <td>Computer Science and Engineering</td>
+  </tr>
+</table>
+    
+  </div>
+</div>
+<br><br><br>
+<div id="courselist">
+<h1 style="position:relative left:30px;"><b>Course List</b></h1>
+<div class="card" style="width:100%;height:300px;background-color:#dddddd;">
+  <div class="container" >
+    <br><br><br>  
+						<div>
+                            <input name="fieldset-5" type="checkbox" />
+                            <label for="checkbox-example-one">
+                                Subject Title
+                            </label>
+                        </div>
+                        <div>
+                            <input name="fieldset-5" type="checkbox" />
+                            <label for="checkbox-example-two">
+                                Subject Title
+                            </label>
+                        </div>
+                        <div>
+                            <input name="fieldset-5" type="checkbox" />
+                            <label for="checkbox-example-two">
+                                Subject Title
+                            </label>
+                        </div>
+                        <div>
+                            <input name="fieldset-5" type="checkbox" />
+                            <label for="checkbox-example-two">
+                                Subject Title
+                            </label>
+                        </div>
+                        <div>
+						</div>
+				<button onclick="myFunction2()"style="position:relative;top:80px;left:450px;background-color: #F7882F;color:white;border:0px">Submit</button>
+               <div id="snackbar2" class="hidden" style="background-color:black;position:relative;top:92px;left:380px;color:white;height:50px;width:200px;text-align:center;opacity: 0.5;">Done!</div>
+ </div>
+</div>
+    
+</article>
+<script>
+function myFunction2() {
+    var x = document.getElementById("snackbar2");
+    x.className = "show";
+    setTimeout(function(){ x.className = x.className.replace("show", "hidden"); }, 3000);
+}
+</script>
+
+
+</body>

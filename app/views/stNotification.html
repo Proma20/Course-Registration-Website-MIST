@@ -1,0 +1,311 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Ramabhadra" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nova Flat" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Palanquin Dark" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Petrona" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="/client.js"></script>
+  
+  
+  
+      <link rel="stylesheet" href="css/style.css">
+
+<style>
+
+#headr{
+background-color:#65ccb8;
+color:black;
+font-family:Helvetica;
+padding:20px;
+padding-left:0px;
+padding-right:0px;
+height: 180px;
+border-bottom: solid 2px #eee;}
+ 
+ 
+ select:focus {
+        min-width: 150px;
+        width: auto;
+ } 
+ 
+  #navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color:#182628;
+    position:relative; 
+    top:20px;
+}
+ 
+.navli {
+    float: right;
+}
+.notifi{
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding-top :14px;
+  padding-left:14px;
+  padding-right:0px;
+  padding-left:14px
+    text-decoration: none;
+  float: right;
+}
+
+li a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active){
+    background-color: #ddd;
+}
+
+li a.active {
+    color: white;
+    background-color:#57ba98;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 40%;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.container {
+    padding: 2px 16px;
+  height:10px;
+}
+article {
+    position: relative;
+    top:  0px;
+    margin-left:50px;
+  margin-right:250px
+    border-left: 1px solid green;
+    padding: 1em;
+    overflow: hidden;
+  height:850px;
+  width:1250px;
+  background-color:#f9f3e0;
+}
+</style>
+</head>
+
+<body>
+
+<div id="headr">
+<h2 style="text-align:center;font-size:30px"><b>Online Course Registration</b></h2>
+<h4 style="text-align:center;">Military Institute of Science and Technology</h4>
+<ul id="navbar">
+  <li class="navli"><a href="" id="signout">Logout</a></li>
+  <li class="navli"><a href="/student/settings">Settings</a></li>
+  <li class="navli"><a href="#prog">Progress</a></li>
+ 
+    <li  class="navli"><a class="active" href="/student/notification">Notifications<div id="bd1" class="badge1" data-badge=""></div></a> </li>
+  <li class="navli"><a href="/student/registration">Registration</a></li>
+  <li class="navli"><a href="/student/profile">Profile</a></li>
+</ul>
+</div>
+
+
+<div style="position: relative;top:0px;margin-left:50px;margin-right:250px;width:1250px;">
+<h1 style="color:#2F4F4F;background-color:#3b945e;font-size:25px;height:60px;text-align:center;"><br><b>Notification</b></h1>
+</div>
+
+<article>
+<h2 style="font-family: 'Palanquin Dark';">Unseen Notification List</h2>
+<ul id="target">
+<li>
+<div class="card" style="width:100%;">
+  <img src="https://cdn.glitch.com/d36feb79-73de-425d-82a6-e60c09fbbcd4%2Fimg_avatar2.png?1525698470630" alt="Avatar" style="width:10%;height:70px;">
+  <div class="container"> 
+    <p style="position:relative;top:-50px;left:500px;font-size:16px;">Advisor has sent you remarks.</p> 
+  </div>
+</div>
+</li>
+<li>
+<div class="card" style="width:100%;">
+  <img src="https://cdn.glitch.com/d36feb79-73de-425d-82a6-e60c09fbbcd4%2Fimg_avatar2.png?1525698470630" alt="Avatar" style="width:10%;height:70px;">
+  <div class="container"> 
+   <p style="position:relative;top:-50px;left:500px;font-size:16px;">dvisor has approved your form.</p> 
+  </div>
+</div>
+</li>
+<li>
+<div class="card" style="width:100%;">
+  <img src="https://cdn.glitch.com/d36feb79-73de-425d-82a6-e60c09fbbcd4%2Fimg_avatar.png?1525697890258" alt="Avatar" style="width:10%;height:70px;">
+  <div class="container"> 
+    <p style="position:relative;top:-50px;left:500px;font-size:16px;">Head of the Department has approved your form.</p> 
+  </div>
+</div>
+</li>
+</ul>
+  
+  <h2 style="font-family: 'Palanquin Dark';">Old Notification List</h2>
+<ul id="old">
+    
+</ul>
+</article>
+
+  
+  
+<script>
+  $(document).ready( function(){
+    console.log("entered student notification");
+    checkStudentSession();
+    var user = localStorage.getItem('myUserEntity');
+        user = JSON.parse(user);
+        var uname = user.username;
+        console.log("uname = " + uname);
+        
+    ///ajax begins
+        $.ajax({
+            type : 'POST' ,
+            url: '/student/notification?id=' + uname,
+            success: function(data) {
+                console.log('success');
+                console.log(data);
+                $("#target").html('');
+                if (data.length == 0){
+                  console.log("kisui pailam na student notification");
+                  //return;
+                }
+                console.log('target reached');
+                // $("#target").html('');
+                var len = data.length;
+                var unseen = 0;
+                for (var i=len-1; i>=0; i--){
+                    var x = data[i];
+                    console.log(x);
+                    // x.seen = true;
+                    var sid = x.sid;
+                    
+                    
+                    var pcolor = 'style="background-color:#F1948A"';
+                    
+                    var typetext = x.type;
+                    var verdicttext = "";
+                    if (x.verdict == "accept"){
+                        verdicttext = "approved";
+                    }
+                    else if (x.verdict == "decline"){
+                        verdicttext = "declined";
+                    }
+                   
+                
+                  if (x.seen == false){
+                    unseen++;
+                    $("#target").append(
+                        '<li>' + 
+                          '<div class="card" style="width:100%;">' +
+    '<img src="https://cdn.glitch.com/d36feb79-73de-425d-82a6-e60c09fbbcd4%2Fimg_avatar2.png?1525698470630" alt="Avatar" style="width:10%;height:70px;">' +
+                        '<div class="container">' + 
+                          '<p style="position:relative;top:-50px;left:400px;font-size:16px; font-family: Nova Flat;">' + 
+                            typetext + ' has ' + verdicttext + ' your registration form' +
+                          '</p><br>' + 
+                      '<p style="position:relative;top:-70px;left:400px;font-size:16px; font-family: Ramabhadra;">' +
+                      '<sr>Remarks: </sr> ' + 
+                        x.remarks  +
+                      '</p>' +
+                  
+                        '</div>' +
+                      '</div>' +
+                    '</li>'
+                        
+                    );
+                  }
+                  else if (x.seen == true){
+                    $("#old").append(
+                        '<li>' + 
+                          '<div class="card" style="width:100%;">' +
+    '<img src="https://cdn.glitch.com/d36feb79-73de-425d-82a6-e60c09fbbcd4%2Fimg_avatar2.png?1525698470630" alt="Avatar" style="width:10%;height:70px;">' +
+                        '<div class="container">' + 
+                          '<p style="position:relative;top:-50px;left:400px;font-size:16px; font-family: Nova Flat;">' + 
+                            typetext + ' has ' + verdicttext + ' your registration form' +
+                          '</p><br>' + 
+                      '<p style="position:relative;top:-70px;left:400px;font-size:16px; font-family: Ramabhadra;">' +
+                      '<sr>Remarks: </sr> ' + 
+                        x.remarks  +
+                      '</p>' +
+                  
+                        '</div>' +
+                      '</div>' +
+                    '</li>'
+                        
+                    );
+                  }
+                }
+                ///ekhane seen korbo
+                console.log('nested ajax');
+                $.ajax({
+                  type : 'POST' ,
+                  url: '/student/notification/seen?id=' + uname,
+                  success: function(data) {
+                    console.log('success nested ajax seen')
+                    console.log(data);  
+                  }
+                }); 
+                $('.badge1').attr("data-badge",unseen);
+                if (unseen == 0){
+                  console.log("unseen is 0");
+                  $("#target").append(
+                    '<div style="background-color: black;">' +
+                    '<p style="color: white; font-size: 1.8em; font-family: Petrona;"> No new notification </p>' +
+                    '</div>'
+                  );
+                }
+            }
+            
+        });  ///ajax ends
+    
+    ///});
+  });
+    
+    ///Logout
+  $('#signout').click(function(){
+    console.log("logout clicked");
+    localStorage.clear();
+    window.location.href = "/login";
+  });
+  
+  ///student session check 
+  function checkStudentSession(){
+    var user = localStorage.getItem('myUserEntity');
+    user = JSON.parse(user);
+    if(user === null || user === '') {
+      window.location.href = "/login";
+      return;
+    }
+    if (user.usertype != "student"){
+      window.location.href = '/' + user.usertype + '/profile';
+      return;
+    }
+  }
+</script>
+  
+  
+</body>
+</html>
+

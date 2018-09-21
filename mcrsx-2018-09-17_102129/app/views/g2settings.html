@@ -1,0 +1,658 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  
+      <link rel="stylesheet" href="css/style.css">
+  <script src="/client.js"></script>
+
+<style>
+
+#headr{
+background-color:#65ccb8;
+color:black;
+font-family:Helvetica;
+padding:20px;
+padding-left:0px;
+padding-right:0px;
+height: 180px;
+border-bottom: solid 2px #eee;}
+ 
+ 
+ select:focus {
+        min-width: 150px;
+        width: auto;
+ } 
+ 
+  #navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color:#182628;
+    position:relative; 
+    top:23px;
+}
+ 
+ #navli {
+    float: right;
+}
+#notifi{
+    display: inline-block;
+    color: black;
+    text-align: center;
+    padding-top :14px;
+  padding-left:14px;
+  padding-right:0px;
+  padding-left:14px
+    text-decoration: none;
+  float: right;
+}
+
+li a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active){
+    background-color: #ddd;
+}
+
+li a.active {
+    color: white;
+    background-color:#57ba98;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 40%;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.container {
+    padding: 2px 16px;
+}
+article {
+    position: relative;
+    top:  0px;
+    margin-left:50px;
+  margin-right:250px
+    border-left: 1px solid green;
+    padding: 1em;
+    overflow: hidden;
+  height:850px;
+  width:1250px;
+  background-color:#f9f3e0;
+
+}
+#edit{
+    position: relative;
+    top:  20px;
+    left:220px;
+  right:240px
+    border-left: 1px solid green;
+    padding: 1em;
+    overflow: hidden;
+  height:700px;
+  width:800px;
+  background-color:white;
+}
+#ed{
+    position: relative;
+    top:  20px;
+    left:0px;
+  right:0px
+    border-left: 1px solid green;
+    padding: 1em;
+    overflow: hidden;
+  height:50px;
+  width:800px;
+  
+}
+<--snackbar-->
+#snackbar {
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    font-size: 17px;
+}
+#snackbar1 {
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    font-size: 17px;
+}
+
+#snackbar2 {
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    font-size: 17px;
+}
+#snackbar3 {
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    font-size: 17px;
+}
+#snackbar4 {
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    font-size: 17px;
+}
+#snackbar5 {
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    font-size: 17px;
+}
+
+#snackbar.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+#snackbar1.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+#snackbar2.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+#snackbar3.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+#snackbar4.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+#snackbar5.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+
+@-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;} 
+    to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;} 
+    to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
+</style>
+</head>
+
+<body>
+
+<div id="headr">
+<h2 style="text-align:center;font-size:30px"><b>Online Course Registration</b></h2>
+<h4 style="text-align:center;">Military Institute of Science and Technology</h4>
+<ul id="navbar">
+  <li id="navli"><a href="#logout">Logout</a></li>
+  <li id="navli"><a href="g2settings.html">Settings</a></li>
+  <li id="notifi" class="dropdown">
+  <select name="slbox" style="color:black;background-color:#182628;width:140px;position:relative;left:-4px;top:0px;border:0px;" onchange="location = this.value;">
+<option value="" style="background-color:#f9f3e0;width:40px;">Offered Courses</option>
+<option value="g2profile.html#courselist"style="background-color:#f9f3e0;width:40px;">Level-1,Term-1</option>
+<option value="g2profile.html#courselist"style="background-color:#f9f3e0;width:40px;">Level-1,Term-2</option>
+<option value="g2profile.html#courselist"style="background-color:#f9f3e0;width:40px;">Level-2,Term-1</option>
+<option value="g2profile.html#courselist"style="background-color:#f9f3e0;width:40px;">Level-2,Term-2</option>
+<option value="g2profile.html#courselist"style="background-color:#f9f3e0;width:40px;">Level-3,Term-1</option>
+<option value="g2profile.html#courselist"style="background-color:#f9f3e0;width:40px;">Level-3,Term-2</option>
+<option value="g2profile.html#courselist"style="background-color:#f9f3e0;width:40px;">Level-4,Term-1</option>
+<option value="g2profile.html#courselist"style="background-color:#f9f3e0;width:40px;">Level-4,Term-2</option>
+</select>
+  </li>
+<li id="navli"><a class="active" href="g2profile.html">Profile</a></li>
+</ul>
+</div>
+
+
+<div style="position: relative;top:0px;margin-left:50px;margin-right:250px;width:1250px;">
+<h1 style="color:#2F4F4F;background-color:#3b945e;font-size:25px;height:60px;text-align:center;"><br><b>Settings</b></h1>
+</div>
+
+<article>
+<div id="edit">
+<br>
+<h4 style="position:relative;left:30px;color:#182628"><b><u>Edit Profile</u></b></h4>
+<div class="card" id="ed">
+  <div class="container"> 
+    <p><b>Name:</b>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;G2's Name
+  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+  <button onclick="document.getElementById('id01').style.display='block'" class="w3-button" style="background-color:#57ba98;position:relative;top:-5px;color:white">Edit</button>
+
+  <div id="id01" class="w3-modal">
+    <div class="w3-modal-content">
+      <div class="w3-container">
+        <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+      <div class="header"style="background-color:#182628">
+           <h2 style="color:white;text-align:center">Edit</h2>
+      </div>
+      <div align="center">
+      <!--<form action="" >-->
+              First name: <input type="text" name="FirstName" value="G2"><br><br>
+              Last name: <input type="text" name="LastName" value="Name"><br><br>
+        <button onclick="myFunction2()"style="position:relative;top:-5px;background-color: #57ba98;color:white;border:0px">Submit</button>
+               <div id="snackbar2" class="hidden" style="background-color:black;color:white;height:50px;width:80px;text-align:center;opacity: 0.5;">Done!</div>
+         
+           <!-- </form>-->
+      </div>
+      </div>
+    </div>
+  </div></p>
+  </div>
+</div>
+<div class="card" id="ed">
+  <div class="container"> 
+    <p><b>Date of Birth:</b>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;1972, 10 June, Monday
+  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;
+  <button onclick="document.getElementById('id02').style.display='block'" class="w3-button" style="background-color:#57ba98;position:relative;top:-5px;color:white">Edit</button>
+
+  <div id="id02" class="w3-modal">
+    <div class="w3-modal-content"style="height:200px;">
+      <div class="w3-container" >
+        <span onclick="document.getElementById('id02').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+         <div class="header"style="background-color:#182628">
+           <h2 style="color:white;text-align:center">Edit</h2>
+      </div>
+      <div align="center"><br><br>
+      <!--<form action="" >-->
+          Year:
+              <select name="slbox" style="color:blueberry">
+          <option value="">1970</option>
+        <option value="">1971</option>
+        <option value="">1972</option>
+        <option value="">1973</option>
+        <option value="">1974</option>
+        <option value="">1975</option>
+        <option value="">1976</option>
+        <option value="">1977</option>
+        <option value="">1978</option>
+        <option value="">1979</option>
+          <option value="">1980</option>
+        <option value="">1981</option>
+        <option value="">1982</option>
+        <option value="">1983</option>
+        <option value="">1984</option>
+        <option value="">1985</option>
+        <option value="">1986</option>
+        <option value="">1987</option>
+        <option value="">1988</option>
+        <option value="">1989</option>
+        <option value="">1990</option>
+        <option value="">1991</option>
+        <option value="">1992</option>
+        <option value="">1993</option>
+        <option value="">1994</option>
+        <option value="">1995</option>
+        <option value="">1996</option>
+        <option value="">1997</option>
+        <option value="">1998</option>
+        <option value="">1999</option>
+        <option value="">2000</option>
+        <option value="">2001</option>
+        <option value="">2002</option>
+        <option value="">2003</option>
+          </select> &emsp;&emsp;
+        Month:
+              <select name="slbox" style="color:blueberry">
+        <option value="">January</option>
+        <option value="">February</option>
+        <option value="">March</option>
+        <option value="">April</option>
+        <option value="">May</option>
+        <option value="">June</option>
+        <option value="">July</option>
+        <option value="">August</option>
+        <option value="">September</option>
+        <option value="">October</option>
+        <option value="">November</option>
+        <option value="">December</option>
+          </select>
+              &emsp;&emsp;
+        Date:
+              <select name="slbox" style="color:blueberry">
+        <option value="">1</option>
+        <option value="">2</option>
+        <option value="">3</option>
+        <option value="">4</option>
+        <option value="">5</option>
+        <option value="">6</option>
+        <option value="">7</option>
+        <option value="">8</option>
+        <option value="">9</option>
+        <option value="">10</option>
+        <option value="">11</option>
+        <option value="">12</option>
+        <option value="">13</option>
+        <option value="">14</option>
+        <option value="">15</option>
+        <option value="">16</option>
+        <option value="">17</option>
+        <option value="">18</option>
+        <option value="">19</option>
+        <option value="">20</option>
+        <option value="">21</option>
+        <option value="">22</option>
+        <option value="">23</option>
+        <option value="">24</option>
+        <option value="">25</option>
+        <option value="">26</option>
+        <option value="">27</option>
+        <option value="">28</option>
+        <option value="">29</option>
+        <option value="">30</option>
+        <option value="">31</option>
+          </select> &emsp;&emsp;
+        Day:
+              <select name="slbox" style="color:blueberry">
+        <option value="">Sunday</option>
+        <option value="">Monday</option>
+        <option value="">Tuesday</option>
+        <option value="">Wednesday</option>
+        <option value="">Thursday</option>
+        <option value="">Friday</option>
+        <option value=""></option>
+        </select>
+        <br><br>
+        <button onclick="myFunction1()"style="position:relative;top:-5px;background-color: #57ba98;color:white;border:0px">Submit</button>
+               <div id="snackbar1" class="hidden" style="background-color:black;color:white;height:50px;width:80px;text-align:center;opacity: 0.5;">Done!</div>
+      </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</div>
+<div class="card" id="ed">
+  <div class="container"> 
+    <p><b>Joining Date:</b>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;2011, 10 January
+  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+  <button onclick="document.getElementById('id03').style.display='block'" class="w3-button" style="background-color:#57ba98;position:relative;top:-5px;color:white">Edit</button>
+
+   <div id="id03" class="w3-modal">
+    <div class="w3-modal-content"style="height:200px;">
+      <div class="w3-container" >
+        <span onclick="document.getElementById('id03').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+         <div class="header"style="background-color:#182628">
+           <h2 style="color:white;text-align:center">Edit</h2>
+      </div>
+      <div align="center"><br><br>
+      <!--<form action="" >-->
+          Year:
+              <select name="slbox" style="color:blueberry">
+        <option value="">2000</option>
+        <option value="">2001</option>
+        <option value="">2002</option>
+        <option value="">2003</option>
+        <option value="">2004</option>
+        <option value="">2005</option>
+        <option value="">2006</option>
+        <option value="">2007</option>
+        <option value="">2008</option>
+        <option value="">2009</option>
+        <option value="">2010</option>
+        <option value="">2011</option>
+        <option value="">2012</option>
+        <option value="">2013</option>
+        <option value="">2014</option>
+        <option value="">2015</option>
+        <option value="">2016</option>
+        <option value="">2017</option>
+        <option value="">2018</option>
+          </select> &emsp;&emsp;
+        Month:
+              <select name="slbox" style="color:blueberry">
+        <option value="">January</option>
+        <option value="">February</option>
+        <option value="">March</option>
+        <option value="">April</option>
+        <option value="">May</option>
+        <option value="">June</option>
+        <option value="">July</option>
+        <option value="">August</option>
+        <option value="">September</option>
+        <option value="">October</option>
+        <option value="">November</option>
+        <option value="">December</option>
+          </select>
+              &emsp;&emsp;
+        Date:
+              <select name="slbox" style="color:blueberry">
+        <option value="">1</option>
+        <option value="">2</option>
+        <option value="">3</option>
+        <option value="">4</option>
+        <option value="">5</option>
+        <option value="">6</option>
+        <option value="">7</option>
+        <option value="">8</option>
+        <option value="">9</option>
+        <option value="">10</option>
+        <option value="">11</option>
+        <option value="">12</option>
+        <option value="">13</option>
+        <option value="">14</option>
+        <option value="">15</option>
+        <option value="">16</option>
+        <option value="">17</option>
+        <option value="">18</option>
+        <option value="">19</option>
+        <option value="">20</option>
+        <option value="">21</option>
+        <option value="">22</option>
+        <option value="">23</option>
+        <option value="">24</option>
+        <option value="">25</option>
+        <option value="">26</option>
+        <option value="">27</option>
+        <option value="">28</option>
+        <option value="">29</option>
+        <option value="">30</option>
+        <option value="">31</option>
+          </select> 
+      <br><br>
+      <button onclick="myFunction3()"style="position:relative;top:-5px;background-color: #57ba98;color:white;border:0px">Submit</button>
+               <div id="snackbar3" class="hidden" style="background-color:black;color:white;height:50px;width:80px;text-align:center;opacity: 0.5;">Done!</div>
+           <!-- </form>-->
+      </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</div>
+<br><br><br><br><br><br><br><br>
+<h4 style="position:relative;left:30px;color:#182628"><b><u>Security</u></b></h4>
+<div class="card" id="ed">
+  <div class="container"> 
+    <p><b>Username:</b>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+  Roll No
+  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+  <button onclick="document.getElementById('id04').style.display='block'" class="w3-button" style="background-color:#57ba98;position:relative;top:-5px;color:white">Change</button>
+
+  <div id="id04" class="w3-modal">
+    <div class="w3-modal-content">
+      <div class="w3-container">
+        <span onclick="document.getElementById('id04').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+    <div class="header"style="background-color:#182628">
+           <h2 style="color:white;text-align:center">Security Edit</h2>
+      </div>
+      <div align="center">
+      <!--<form action="" >-->
+              Current Username: <input type="text" name="Username" value="Roll No"><br><br>
+              Changed Username: <input type="text" name="newUsername" value=""><br><br>
+        <button onclick="myFunction4()"style="position:relative;top:-5px;background-color: #57ba98;color:white;border:0px">Change</button>
+               <div id="snackbar4" class="hidden" style="background-color:black;color:white;height:50px;width:80px;text-align:center;opacity: 0.5;">Done!</div>
+         
+           <!-- </form>-->
+      </div>
+     
+        
+      </div>
+    </div>
+  </div></p>
+  </div>
+</div>
+<div class="card" id="ed">
+  <div class="container"> 
+    <p><b>Password:</b>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+
+  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+  <button onclick="document.getElementById('id05').style.display='block'" class="w3-button" style="background-color:#57ba98;position:relative;top:-5px;color:white">Change</button>
+
+  <div id="id05" class="w3-modal">
+    <div class="w3-modal-content">
+      <div class="w3-container">
+        <span onclick="document.getElementById('id05').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+        <div class="header"style="background-color:#182628">
+           <h2 style="color:white;text-align:center">Security Edit</h2>
+      </div>
+      <div align="center-left">
+      <!--<form action="" >-->
+                Password:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; <input type="password" name="oldpass" value="12345678"><br><br>
+                New Password: &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; <input type="password" name="newpass" value="" ><br><br>
+          Re-enter New Password:&emsp;&emsp;&emsp;<input type="password" name="newpass1" value=""><br><br>
+        
+      </div>
+      <button onclick="myFunction5()" style="position:relative;top:-5px;left:400px;background-color: #57ba98;color:white;border:0px">Change</button>
+               <div id="snackbar5" class="hidden" style="background-color:black;color:white;height:50px;width:80px;text-align:center;opacity: 0.5;">Done!</div>
+         
+           <!-- </form>-->
+      </div>
+    </div>
+  </div></p>
+  </div>
+</div>
+
+</div>
+
+
+</article>
+<script>
+function myFunction() {
+    var x = document.getElementById("snackbar");
+    x.className = "show";
+    setTimeout(function(){ x.className = x.className.replace("show", "hidden"); }, 3000);
+}
+function myFunction1() {
+    var x = document.getElementById("snackbar1");
+    x.className = "show";
+    setTimeout(function(){ x.className = x.className.replace("show", "hidden"); }, 3000);
+}
+function myFunction2() {
+    var x = document.getElementById("snackbar2");
+    x.className = "show";
+    setTimeout(function(){ x.className = x.className.replace("show", "hidden"); }, 3000);
+}
+function myFunction2() {
+    var x = document.getElementById("snackbar2");
+    x.className = "show";
+    setTimeout(function(){ x.className = x.className.replace("show", "hidden"); }, 3000);
+}
+function myFunction3() {
+    var x = document.getElementById("snackbar3");
+    x.className = "show";
+    setTimeout(function(){ x.className = x.className.replace("show", "hidden"); }, 3000);
+}
+function myFunction4() {
+    var x = document.getElementById("snackbar4");
+    x.className = "show";
+    setTimeout(function(){ x.className = x.className.replace("show", "hidden"); }, 3000);
+}
+function myFunction5() {
+    var x = document.getElementById("snackbar5");
+    x.className = "show";
+    setTimeout(function(){ x.className = x.className.replace("show", "hidden"); }, 3000);
+}
+</script>
+
+
+</body>
+</html>

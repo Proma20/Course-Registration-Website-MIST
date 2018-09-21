@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+* {
+    font-family: Ariel;
+}
+body {
+padding: 0;
+margin: 0;
+background-color: #FFF;
+}
+
+
+
+
+.header {
+    background-color: #6B7A8F;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    
+}
+
+.header2 {
+    background-color: #DCC7AA;
+    text-align: center;
+    color: black;
+    padding: 0.5px;
+    width: 76%;
+    left: ;
+    right: ;
+    border-color: black;
+    border : 10%;
+    float: right;
+}
+ul {
+
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+ /*   position: -webkit-sticky; /* Safari */
+  /*  position: sticky; */
+    top: 0;
+    border: 1px solid #F7882F;
+    background-color: #F7882F;
+}
+
+li {
+    float: right;
+    background-color: #F7882F;
+   
+}
+
+li a, .dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+
+
+.active {
+    background-color: #F7C331;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+    background-color: #F7C331;
+}
+
+li.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    border: 1px solid #e7e7e7;
+    background-color: #ABD1D9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+
+       background-color: #D9FFF7;
+}
+
+.dropdown:hover .dropdown-content {
+    
+    display: block;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+}
+
+
+
+.img{
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+   
+
+
+}
+
+
+.container:hover .image {
+  opacity: 0.3;
+}
+
+.container:hover .middle {
+
+  opacity: 1;
+}
+
+
+
+
+
+.container1, .container2 {
+    position: absolute;
+    left:300;
+    right:300;
+    height:400px; /* based on screen size */
+}
+.container1 {
+    top: 0;
+}
+.container2 {
+    bottom: 0;
+}
+
+
+/* Create three equal columns that floats next to each other */
+.column {
+  
+    float: left;
+    padding: 10px;
+    margin: 10px;
+    height: 600px;
+
+}
+
+.left, .right {
+  width: 20%;
+  height: 660px;
+  background: repeating-linear-gradient(to right, #F7C331, #F7C331 90%, #fff 10%, #Fff 100%);;
+}
+
+.middle {
+  width: 35%;
+}
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width:600px) {
+    .column {
+        width: 100%;
+    }
+}
+
+
+
+.meter { 
+  height: 20px;  /* Can be anything */
+  position: relative;
+  background: #000000;
+  -moz-border-radius: 25px;
+  -webkit-border-radius: 25px;
+  border-radius: 25px;
+  padding: 10px;
+  box-shadow: inset 0 -1px 1px rgba(255,255,255,0.3);
+}
+
+
+.meter > span {
+  display: block;
+  height: 100%;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  background-color: #3B945E;
+  background-image: linear-gradient(
+    center bottom,
+    rgb(43,194,83) 37%,
+    rgb(84,240,84) 69%
+  );
+  box-shadow: 
+    inset 0 2px 9px  rgba(255,255,255,0.3),
+    inset 0 -2px 6px rgba(0,0,0,0.4);
+  position: relative;
+  overflow: hidden;
+}
+
+
+.notifications {
+      position: absolute;
+      border-radius:2px;
+      font-size:14px;
+      background-color:red;
+      color:#fff;
+      padding:2px 5px;
+      top:145px;
+      right:2px;
+    }
+
+
+.badge1 {
+   position:relative;
+}
+
+
+
+.badge1[data-badge]:after {
+   content:attr(data-badge);
+   position:absolute;
+   top:-30px;
+   right:-15px;
+   font-size:.7em;
+   background:green;
+   color:white;
+   width:18px;height:18px;
+   text-align:center;
+   line-height:18px;
+   border-radius:50%;
+   box-shadow:0 0 1px #333;
+}
+
+
+progress {
+       text-align: center;
+ }
+
+progress:after {
+ background-color: #fff;
+  content: attr(value)'%';
+}
+
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+
+
+
+
+ .container1 {
+ margin:20px auto; 
+ 
+}
+.panel {
+  overflow:hidden;
+}
+.btn-block {
+  padding:1em 0;
+  border-radius:0;
+  font-weight:700;
+  font-size:1.25em;
+}
+table, th, td {
+    border: 0.5px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 0.2px;
+    text-align: center;    
+}
+
+    /* The Modal (background) */
+    .modal {
+        max-height: calc(100vh - 210px);
+        overflow-y: auto;
+        overflow-x: auto;
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        padding-top: 10px; /* Location of the box */
+        left: 25%;
+        top: 10%;
+        right: 25%;
+        width: 50%%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    }
+
+    /* Modal Content */
+    .modal-content {
+        position: relative;
+        background-color: #fefefe;
+        margin: auto;
+        padding: 0;
+        border: 1px solid #888;
+        width: 100%;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+        -webkit-animation-name: animatetop;
+        -webkit-animation-duration: 0.4s;
+        animation-name: animatetop;
+        animation-duration: 0.4s
+    }
+
+    /* Add Animation */
+    @-webkit-keyframes animatetop {
+        from {top:-300px; opacity:0} 
+        to {top:0; opacity:1}
+    }
+
+    @keyframes animatetop {
+        from {top:-300px; opacity:0}
+        to {top:0; opacity:1}
+    }
+
+    /* The Close Button */
+    .close {
+        color: white;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    .modal-header {
+        padding: 2px 16px;
+        background-color: #5cb85c;
+        color: white;
+    }
+
+    .modal-body {padding: 2px 16px;}
+
+    .modal-footer {
+        padding: 2px 16px;
+        background-color: #5cb85c;
+        color: white;
+    }
+
+
+    .button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+.button:hover {
+    background-color: #5abc5e; /* Green */
+    color: white;
+}
+
+
+article {
+    position: relative;
+    top:  0px;
+    margin-left:250px;
+	margin-right:250px
+    border-left: 1px solid green;
+    padding: 1em;
+    overflow: hidden;
+	height:850px;
+	background-color:#f9f3e0;
+}
+
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Course Registration System</h1>
+  <h3>Military Institute Of Science and Technology</h3>
+</div>
+
+<ul>
+  <li><a  href="#home">Logout</a></li>
+<li><a  href="hdSettings.html">Settings</a></li>
+   <li><a class="active" href="hdStudent.html">Students</a></li>
+  <li   class="dropdown"><a href="hdNotification.html">Notifications<div class="badge1" data-badge="3"></div></a>
+    
+    <div class="dropdown-content">
+      <a >Student A sent Payment slip.</a>
+      <a >Student B send Registration form</a>
+      <a >Student c send Payment slip.</a>
+      <a  href="hdNotification.html" style="size: 0.5px">See more</a>
+    </div>
+    </li>
+    <li><a  href="hdProfile.html">Profile</a></li>
+  </li>
+</ul>
+
+  
+
+
+
+
+
+<div class="header2">
+  <h3>Students</h3>
+</div>
+
+
+
+<div class="row">
+<div class="w3-container">
+  <h2>Students List</h2>
+  <p></p>
+  <ul class="w3-ul w3-card-4">
+    <li class="w3-bar" style="background-color: #FFF">
+       
+      <img src="img_avatar2.png" class="w3-bar-item w3-circle w3-hide-small" style="width:85px">
+      <div class="w3-bar-item">
+        <span class="w3-large">Student A</span><br>
+
+       
+         
+      </div>
+      <div style="float:right">
+
+
+       <!-- Trigger/Open The Modal -->
+<button class="button" id="myBtn1">See Profile</button>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header" style="background-color: #F7882F">
+
+
+      <span class="close">&times;</span>
+      <h2>Student's Profile</h2>
+    </div>
+    <div class="modal-body">
+      
+
+
+
+
+   
+     <div class="container">
+  <img src="img_avatar2.png" alt="Avatar" class="img" style="width:300px;height: 300px">
+     </div>
+
+
+  <div class="container" >
+  <div class="row">
+   <h1 style="position:relative left:30px;"><b>Student Information</b></h1>
+
+  <br><br>
+  
+
+
+  <div class="column" style="width: 25%; font-weight: bold; font-style: italic; background-color: #f9f3e0; height: 350px">
+ <label for="firstname">Name   </label> <br>
+   <label for="roll">Class Roll   </label> <br>
+     <label for="firstname">Registration No </label> <br>
+   <label for="firstname">Date of Birth </label> <br>
+     <label for="firstname">Admission Date </label> <br>
+ <label for="firstname">CGPA </label> <br>
+   <label for="firstname">Department </label> <br>
+   <label for="firstname">Program </label> <br>
+       <label for="firstname">Curriculum</label> <br>
+           <label for="firstname">Level-Term </label> <br>
+               <label for="firstname">Dept Batch </label> <br>
+  </div>
+
+
+
+  <div class="column" style="width: 60%; background-color: #ABD1D9; height: 350px">
+  <label for="firstname">Student's Name</label> <br>
+   <label for="roll">00000000</label> <br>
+      <label for="roll">00000000000</label> <br>
+ <label for="roll">1996, 01 January, Tuesday</label><br>
+   <label for="roll"> 2014, 27 January</label> <br> 
+       <label for="roll"> 0.00</label>   <br>
+           <label for="roll">Computer Science And Engineering (CSE)</label>  <br>
+            <label for="roll"> B.Sc. in CSE</label> <br>
+        <label for="roll">2015 B.Sc. in CSE Syllabus</label> <br>
+           <label for="roll">4-1</label> <br>
+            <label for="roll">CSE-15</label> <br>
+
+
+
+</div>
+</div>
+ </div>
+
+
+
+
+
+
+
+
+
+    </div>
+    <div class="modal-footer">
+        
+    </div>
+  </div>
+
+</div>
+
+
+
+
+
+
+         
+    </div>
+           <p>Registartion Progress : </p>
+          <progress style="float:left" value="25" max="100">
+
+    </li>
+
+    <li class="w3-bar" style="background-color: #FFF">
+       
+      <img src="img_avatar5.png" class="w3-bar-item w3-circle w3-hide-small" style="width:85px">
+      <div class="w3-bar-item">
+       <span class="w3-large">Student B</span><br>
+      </div>
+      <div style="float:right">
+
+       <!-- Trigger/Open The Modal -->
+<button class="button" id="myBtn2">See Profile</button>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header" style="background-color: #F7882F">
+      
+      <span class="close">&times;</span>
+      <h2>Student's Profile</h2>
+    </div>
+    <div class="modal-body">
+      
+
+
+     <div class="container">
+  <img src="img_avatar5.png" alt="Avatar" class="img" style="width:300px;height: 300px">
+     </div>
+
+
+  <div class="container" >
+  <div class="row">
+   <h1 style="position:relative left:30px;"><b>Student Information</b></h1>
+
+  <br><br>
+  
+
+
+  <div class="column" style="width: 25%; font-weight: bold; font-style: italic; background-color: #f9f3e0; height: 350px">
+ <label for="firstname">Name   </label> <br>
+   <label for="roll">Class Roll   </label> <br>
+     <label for="firstname">Registration No </label> <br>
+   <label for="firstname">Date of Birth </label> <br>
+     <label for="firstname">Admission Date </label> <br>
+ <label for="firstname">CGPA </label> <br>
+   <label for="firstname">Department </label> <br>
+   <label for="firstname">Program </label> <br>
+       <label for="firstname">Curriculum</label> <br>
+           <label for="firstname">Level-Term </label> <br>
+               <label for="firstname">Dept Batch </label> <br>
+  </div>
+
+
+
+  <div class="column" style="width: 60%; background-color: #ABD1D9; height: 350px">
+  <label for="firstname">Student's Name</label> <br>
+   <label for="roll">00000000</label> <br>
+      <label for="roll">00000000000</label> <br>
+ <label for="roll">1996, 01 January, Tuesday</label><br>
+   <label for="roll"> 2014, 27 January</label> <br> 
+       <label for="roll"> 0.00</label>   <br>
+           <label for="roll">Computer Science And Engineering (CSE)</label>  <br>
+            <label for="roll"> B.Sc. in CSE</label> <br>
+        <label for="roll">2015 B.Sc. in CSE Syllabus</label> <br>
+           <label for="roll">4-1</label> <br>
+            <label for="roll">CSE-15</label> <br>
+
+
+
+</div>
+</div>
+
+ </div>
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+    <div class="modal-footer">
+        <button  style="float: right" style="background-color: red" class="button">Decline</button>
+       <button  style="float: right" class="button">Accept</button>
+
+    </div>
+  </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+    
+</div>
+      <p>Registartion Progress : </p>
+      <progress style="float:left" value="65" max="100">
+    </li>
+
+    <li class="w3-bar" style="background-color: #FFF">
+       
+      <img src="img_avatar6.png" class="w3-bar-item w3-circle w3-hide-small" style="width:85px">
+      <div class="w3-bar-item">
+        <span class="w3-large">Student C</span><br>
+      </div>
+      <div style="float:right">
+        
+
+
+       <!-- Trigger/Open The Modal -->
+<button class="button" id="myBtn3">See Profile</button>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header" style="background-color: #F7882F">
+      
+      <span class="close">&times;</span>
+      <h2>Student's Profile</h2>
+    </div>
+    <div class="modal-body">
+      
+
+
+
+     <div class="container">
+  <img src="img_avatar6.png" alt="Avatar" class="img" style="width:300px;height: 300px">
+     </div>
+
+
+  <div class="container" >
+  <div class="row">
+   <h1 style="position:relative left:30px;"><b>Student Information</b></h1>
+
+  <br><br>
+  
+
+
+  <div class="column" style="width: 25%; font-weight: bold; font-style: italic; background-color: #f9f3e0; height: 350px">
+ <label for="firstname">Name   </label> <br>
+   <label for="roll">Class Roll   </label> <br>
+     <label for="firstname">Registration No </label> <br>
+   <label for="firstname">Date of Birth </label> <br>
+     <label for="firstname">Admission Date </label> <br>
+ <label for="firstname">CGPA </label> <br>
+   <label for="firstname">Department </label> <br>
+   <label for="firstname">Program </label> <br>
+       <label for="firstname">Curriculum</label> <br>
+           <label for="firstname">Level-Term </label> <br>
+               <label for="firstname">Dept Batch </label> <br>
+  </div>
+
+
+
+  <div class="column" style="width: 60%; background-color: #ABD1D9; height: 350px">
+  <label for="firstname">Student's Name</label> <br>
+   <label for="roll">00000000</label> <br>
+      <label for="roll">00000000000</label> <br>
+ <label for="roll">1996, 01 January, Tuesday</label><br>
+   <label for="roll"> 2014, 27 January</label> <br> 
+       <label for="roll"> 0.00</label>   <br>
+           <label for="roll">Computer Science And Engineering (CSE)</label>  <br>
+            <label for="roll"> B.Sc. in CSE</label> <br>
+        <label for="roll">2015 B.Sc. in CSE Syllabus</label> <br>
+           <label for="roll">4-1</label> <br>
+            <label for="roll">CSE-15</label> <br>
+
+
+
+</div>
+</div>
+ </div>
+
+
+
+
+
+
+
+
+    </div>
+    <div class="modal-footer">
+        <button  style="float: right" style="background-color: red" class="button">Decline</button>
+       <button  style="float: right" class="button">Accept</button>
+
+    </div>
+  </div>
+
+</div>
+
+
+
+
+
+
+
+     </div>
+         <p>Registartion Progress : </p>
+
+         <progress style="float:left" value="10" max="100">
+    </li>
+  </ul>
+</div>
+</div>
+
+
+
+    <script>
+    // Get the modal
+    var modal = document.getElementById('myModal');
+
+    // Get the button that opens the modal
+    var btn1 = document.getElementById("myBtn1");
+    var btn2 = document.getElementById("myBtn2");
+    var btn3 = document.getElementById("myBtn3");
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks the button, open the modal 
+    btn1.onclick = function() {
+        modal.style.display = "block";
+    }
+
+    btn2.onclick = function() {
+        modal.style.display = "block";
+    }
+
+    btn3.onclick = function() {
+        modal.style.display = "block";
+    }
+
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+
+
+    </script>
+
+
+
+
+
+
+
+</body>
+</html>
+

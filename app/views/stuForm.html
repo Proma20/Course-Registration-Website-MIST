@@ -1,0 +1,1190 @@
+<!Doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Petrona" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   <!-- <link rel="stylesheet" href="css/style.css"> -->
+   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <script src="/client.js"></script>
+  
+      <!-- <link rel="stylesheet" href="css/style.css"> -->
+
+<style>
+table, td, th {
+    border: 1px solid black;
+  text-align:center;
+}
+
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th {
+    height: 50px;
+}
+<--upore shob form-->
+
+#H2{
+background-color:#65ccb8;
+color:black;
+font-family:Helvetica;
+padding:20px;
+padding-left:0px;
+padding-right:0px;
+height: 180px;
+border-bottom: solid 2px #eee;}
+ 
+ 
+ select:focus {
+        min-width: 150px;
+        width: auto;
+ } 
+ 
+  #navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color:#182628;
+    position:relative; 
+    top:23px;
+}
+ 
+ .navli {
+    float: right;
+}
+#notifi{
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding-top :14px;
+  padding-left:14px;
+  padding-right:0px;
+  padding-left:14px
+    text-decoration: none;
+  float: right;
+}
+
+li a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active){
+    background-color: #ddd;
+}
+
+li a.active {
+    color: white;
+    background-color:#57ba98;
+}
+
+article {
+    position: relative;
+    margin-top:  1.25%;
+    margin-left:15.8%;
+    margin-right:10%;
+/*     padding-bottom: 10%; */
+    border-left: 5px solid black;
+    border-right: 5px solid black;
+    border-top: 5px solid black;
+    padding: 1em;
+    overflow: hidden;
+/*   height:100%; */
+    width:70%;
+  background-color:#f9f3e0;
+  font-size: 1.4em;
+
+}
+/*   
+#edit{
+    position: relative;
+    top:  20px;
+    left:150px;
+  right:280px
+    border-left: 1px solid green;
+    padding: 1em;
+    overflow: hidden;
+  height:80%px;
+  width:90%;
+  background-color:white;
+} */
+#ed{
+    position: relative;
+    top:  20px;
+    left:0px;
+  right:0px
+    border-left: 1px solid green;
+    padding: 1em;
+    overflow: hidden;
+  height:50px;
+  width:800px;
+  
+}
+<--snackbar-->
+#snackbar {
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    font-size: 17px;
+}
+#snackbar1 {
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    font-size: 17px;
+}
+
+
+#snackbar.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+#snackbar1.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+
+.small {
+    width: 80%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid black;
+  border-radius: 4px;
+  text-align: center;
+/*  color: green; */
+}
+  
+/*  Start  */
+  
+ .txtbox
+    {
+     
+     height:150px;
+     width:90%;
+    }
+table, td, th {
+    border: 1px solid black;
+  text-align:center;
+}
+
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th {
+    height: 10%;
+}
+
+
+* {
+    font-family: 'petrona';
+    
+}
+/* body {
+padding: 0;
+margin: 0;
+background-color: #FFF;
+}
+ */
+
+
+
+.header {
+    background-color: #6B7A8F;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    
+}
+
+.header2 {
+    background-color: #DCC7AA;
+    text-align: center;
+    color: black;
+    padding: 0.5px;
+    width: 100%;
+    left: ;
+    right: ;
+    border-color: black;
+    border : 10%;
+    
+}
+
+#list{
+  background-color: #F7882F;
+  border: 1px solid #F7882F;
+
+}
+ul {
+
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  /*  position: -webkit-sticky; /* Safari */
+   /* position: sticky;*/
+    top: 0;
+    
+   /* background-color: #F7882F;*/
+
+}
+
+li {
+    float: right;
+    /*background-color: #F7882F;*/
+   
+}
+
+li a, .dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+
+
+.active {
+    background-color: #F7C331;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+    background-color: #F7C331;
+}
+
+li.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    border: 1px solid #e7e7e7;
+    background-color: #ABD1D9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+
+       background-color: #D9FFF7;
+}
+
+.dropdown:hover .dropdown-content {
+    
+    display: block;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+}
+
+
+
+
+.notifications {
+      position: absolute;
+      border-radius:2px;
+      font-size:14px;
+      background-color:red;
+      color:#fff;
+      padding:2px 5px;
+      top:145px;
+      right:2px;
+    }
+
+
+.badge1 {
+   position:relative;
+}
+
+
+
+.badge1[data-badge]:after {
+   content:attr(data-badge);
+   position:absolute;
+   top:-30px;
+   right:-15px;
+   font-size:.7em;
+   background:green;
+   color:white;
+   width:18px;height:18px;
+   text-align:center;
+   line-height:18px;
+   border-radius:50%;
+   box-shadow:0 0 1px #333;
+}
+
+
+
+
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 40%;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.container {
+    padding: 2px 16px;
+}
+
+
+<--snackbar-->
+#snackbar {
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    font-size: 17px;
+}
+#snackbar1 {
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    font-size: 17px;
+  visibility:hidden;
+}
+
+#snackbar2 {
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    font-size: 17px;
+}
+#snackbar3 {
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    font-size: 17px;
+}
+#snackbar4 {
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    font-size: 17px;
+}
+#snackbar5 {
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    font-size: 17px;
+}
+
+#snackbar.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+#snackbar1.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+#snackbar2.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+#snackbar3.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+#snackbar4.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+#snackbar5.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+
+@-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;} 
+    to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;} 
+    to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
+  
+/* End  */
+  
+  body{
+    background: #212F3C;
+    background-size: cover;
+    font-family: 'petrona';
+  }
+  
+  *{
+/*     font-family: petrona; */
+    
+  }
+  
+  
+</style>
+</head>
+
+<body>
+
+<div style="background-color:#65ccbb;
+color:black;
+font-family:Helvetica;
+padding:20px;
+padding-left:0px;
+padding-right:0px;
+height: 180px;
+border-bottom: solid 2px #eee;">
+<h2 style="text-align:center;font-size:30px"><b>Online Course Registration</b></h2>
+<h4 style="text-align:center;">Military Institute of Science and Technology</h4>
+<ul id="navbar" style="font-size: 1.2em">
+  <li class="navli"><a href="" id="signout">Logout</a></li>
+  <li class="navli"><a href="/student/settings">Settings</a></li>
+  <li class="navli"><a href="#prog">Progress</a></li>
+ 
+    <li  class="navli"><a href="/student/notification">Notifications<div id="bd1" class="badge1" data-badge=""></div></a> </li>
+  <li class="navli"><a class="active" href="/student/registration">Registration</a></li>
+  <li class="navli"><a href="/student/profile">Profile</a></li>
+</ul>
+  
+  
+</div>
+<div style="position: relative;top:20px;margin-left:250px;margin-right:250px;width:70%;color:#2F4F4F;background-color:#3b945e;">
+<h1 style="font-size:25px;height:60px;text-align:center;position:relative;top:-10px; color:white;"><br><b>Course Registration Form</b></h1>
+</div>
+
+
+<article>
+<div class="edit">
+<div  style="position:relative; margin-top:5%;">
+                                    <label for="dep">
+                                        <b>Department:</b>
+                                    </label>&nbsp;<span id="sdept">A</span>
+              </div>
+  <br>
+<div>             
+<div style="position:relative;float:right; margin-right:-20%; margin-top:-10%;">
+                                    
+                              <img id="picture" src="https://cdn.glitch.com/d36feb79-73de-425d-82a6-e60c09fbbcd4%2Fimg_avatar2.png?1525698470630" alt="promawesome" height="50%" width="50%"/>
+                                </div>
+<br>
+<div style="position:relative; margin-top:-2%;">
+                        <label for="session">
+                           <b> Session:</b>
+                        </label>&nbsp;<span id="session">A</span>
+                        
+
+</div>
+  <br>
+  <div>
+    <span style="position:relative;">
+                            <label for="firstname">
+                                <b>Level:</b>
+                            </label>&nbsp;<span id="slevel">A</span>&nbsp;&nbsp;
+              <label for="firstname">
+                              <b>  Term:</b>
+                            </label>&nbsp;<span id="sterm">A</span>
+</span>
+  </div>
+<br>
+<div>
+                        <label for="username">
+                            <b>Name of Student:</b>
+                        </label>
+                        &nbsp;<span id="sname">abc xyz</span>
+                    </div>
+          <br>
+                    <div>
+                        <label for="username">
+                           <b> Registration No:</b>
+                        </label>
+                       &nbsp;<span id="sreg">151411051234</span>
+                    </div>
+          <br>
+                    <div>
+                        <label for="username">
+                           <b> Roll No:</b>
+                        </label>
+                        &nbsp;<span id="sroll">201514031</span>
+                    </div>
+          <br>
+                    <label>
+                       <b> Previous Results (GPA):</b>
+                    </label>
+          <div>
+                    <table>
+            <tr>
+                <th colspan="2">
+                                    Level 1
+                                </th>
+                                <th colspan="2">
+                                    Level 2
+                                </th>
+                                <th colspan="2">
+                                    Level 3
+                                </th>
+                                <th colspan="2">
+                                    Level 4
+                                </th>
+            </tr>
+            <tr>
+                                <td>
+                                    Term 1
+                                </td>
+                                <td>
+                                    Term 2
+                                </td>
+                                <td>
+                                    Term 1
+                                </td>
+                                <td>
+                                    Term 2
+                                </td>
+                                <td>
+                                    Term 1
+                                </td>
+                                <td>
+                                    Term 2
+                                </td>
+                                <td>
+                                    Term 1
+                                </td>
+                                <td>
+                                    Term 2
+                                </td>
+                            </tr>
+              <tr>
+                                <td id="l1t1">
+                                    3.02
+                                </td>
+                                <td id="l1t2">
+                                   3.78
+                                </td>
+                <td id="l2t1">
+                                   3.81 
+                                </td>
+                <td id="l2t2">
+                                    3.90
+                                </td>
+                <td id="l3t1">
+                                    3.91
+                                </td>
+                <td id="l3t2">
+                                   3.91
+                                </td>
+                <td>
+                                    
+                                </td>
+                <td>
+                                    
+                                </td>
+                            </tr>
+              
+              
+           
+            
+
+
+          </table>
+
+          </div>
+
+</div>
+<br>
+                    <label>
+                       <b>Student's Course Choice:</b>
+                    </label>
+          <div id="course-div">
+          </div>
+<br>
+                    <label>
+                       <b>Total Credit Hour:</b>
+  </label><span id="scredit">0</span>
+          
+<br><br>
+     <div id="bottom">
+  <br>
+          <div>
+                <button onclick="myFunction1()" style="position:relative;top:-5px;margin-left:45%;background-color: #57ba98;color:white;border:0px">Submit Form</button>
+               <div id="snackbar1" class="hidden" style="background-color:black;color:white;height:50px;width:80px;text-align:center;opacity: 0.5;">Submitted</div>
+              
+              </div>
+  <br><br>
+       
+       <div id="gen">
+        <button onclick="generate()" style="position:relative;top:-5px;margin-left:44.5%;background-color: #57ba98;color:white;border:0px">Generate Payslip</button>
+       </div>
+  
+    
+  <div id="payslip">
+    
+  
+    <div>
+              <label for="username">
+               Upload Payment Slip:
+               </label>
+              <input accept="image/*" name="slip" type="file"  required />
+    </div>
+      <button onclick="Payment()" style="position:relative;top:-5px;margin-left:44.5%;background-color: #57ba98;color:white;border:0px">Submit Payslip</button>
+    <div id="snackbar2" class="hidden" style="background-color:black;color:white;height:50px;width:80px;text-align:center;opacity: 0.5;">Submitted</div> 
+  </div>
+  </div>               
+<!--  bottom end  -->
+</div> 
+<!--  End of class edit-->
+  
+
+
+</article>
+  
+  
+  
+  
+
+  
+<script>
+  ///////////////Java Script  
+  
+  
+  
+ var stObj = {}; 
+  
+function myFunction() {
+    var x = document.getElementById("snackbar");
+    x.className = "show";
+    setTimeout(function(){ x.className = x.className.replace("show", "hidden"); }, 3000);
+    submitForm();
+}
+function myFunction1() {
+    
+    submitForm();
+}
+  function Payment() {
+    var x = document.getElementById("snackbar2");
+    x.className = "show";
+    setTimeout(function(){ x.className = x.className.replace("show", "hidden"); }, 3000);
+    
+    $.ajax({
+      type : 'POST',
+      url : '/student/profile?id='+uname,
+      //dataType: "json",
+      //data: kaka,
+      success : function(data){
+          console.log(data.length);
+          var ok = data[1];
+          console.log(data);
+          $.ajax({
+            type : 'POST',
+            url : '/student/registration/payslip?id='+uname,
+            //dataType: "json",
+            data: ok,
+            success : function(data){
+              console.log(data);
+
+            }
+          });
+        }
+    });
+}
+
+/////////ihtiaz
+function testText(){
+  console.log("clicked td");
+}
+
+  var credit = 0;
+  
+function submitForm(){
+  $("#gen").show()
+  
+  var selected = [];
+  $('#course-div input:checked').each(function() {
+      var cx = $(this).attr('id');
+      console.log(cx);
+      credit += fsub[cx][1];
+      selected.push($(this).attr('id'));
+  });
+  console.log(fsub);
+  console.log('credit = ' + credit);
+  if (credit <= 5){
+    alert('Must take higher than 5 credit');
+    return;
+  }
+  else if (credit > 10){
+           alert('Must take lower than 10 credit hour');
+        return;
+  }
+  stObj.credit = credit;
+  console.log('stObj.credit ' + stObj.credit);
+  console.log(selected);
+  stObj.courses = selected;
+  stObj.courses = JSON.stringify(stObj.courses);
+  stObj.result = JSON.stringify(stObj.result);
+  console.log('st_info te jabe');
+  console.log(stObj);
+  
+  if (selected.length == 0){
+    alert("You must select at least one subject");
+    return;
+  }
+  
+  console.log(stObj);
+  
+    $.ajax({
+      type : 'POST',
+      url : '/updateregform?id='+uname,
+      dataType: "json",
+      data: stObj,
+      success : function(data){
+        alert('Successfully submitted');
+        window.location.replace("/student/profile");
+      }
+    });
+  
+ var x = document.getElementById("snackbar1");
+    x.className = "show";
+    setTimeout(function(){ x.className = x.className.replace("show", "hidden"); }, 3000);
+    
+  
+}
+  
+  function generate(){
+    console.log('generate');
+     window.location.href = "/payslip/generate?id=" + uname;
+  }
+  
+var uname;  
+var kaka;
+$(document).ready( function(){
+    checkStudentSession();
+    $("#bd1").hide();
+    $("#gen").hide();
+    var user = localStorage.getItem('myUserEntity');
+    user = JSON.parse(user);
+    uname = user.username;
+    console.log("uname = " + uname);
+    $("#payslip").hide();
+    $.ajax({
+        type : 'POST' ,
+        url: '/student/registration/progress?id=' + uname,
+        success: function(data) {
+          console.log('progress er ki obostha?');
+          console.log(data);
+          if (data.length == 0) return;
+          if (data.length > 0) kaka = data[0];
+          if (data[0].advisor_approval == true){
+            $("#payslip").show();
+          }
+        }
+    });
+  
+    $.ajax({
+        type : 'POST' ,
+        url: '/student/registration/formfillup?id=' + uname,
+        success: function(data) {
+          // $('#course-div').html(' ');
+          console.log('uname ' + uname);
+          console.log('form fill up');
+          console.log(data);
+          var cur = data[0];
+          stObj = cur;
+              console.log(cur.result);
+              $("#sname").html(cur.name);
+              $("#sroll").html(cur.sid);
+              $("#sreg").html(cur.reg_no);
+              // $("#sdob").html(cur.dob);
+              // $("#scgpa").html(cur.cgpa);
+              $("#sdept").html(cur.dept);
+              $("#slevel").html(cur.level);
+              $("#sterm").html(cur.term);
+              $("#sbatch").html(cur.batch);
+              $("#session").html(cur.session);
+               $("#l1t1").html(cur.result[0][0]);
+              $("#l1t2").html(cur.result[0][1]);
+              $("#l2t1").html(cur.result[1][0]);
+              $("#l2t2").html(cur.result[1][1]);
+              $("#l3t1").html(cur.result[2][0]);
+              $("#l3t2").html(cur.result[2][1]);
+              $("#l4t1").html(cur.result[3][0]);
+              $("#l4t2").html(cur.result[3][1]);
+              $("#picture").attr("src", cur.photo);
+          
+            
+          
+            ///load subjects
+            
+            ///load 4-1 courses
+           if (cur.level >= 2){
+            $.ajax({
+                type : 'POST' ,
+                url: '/student/registration?id=' + uname,
+                data: {lvl: 2, term: 1},
+                success: function(data) {
+                    console.log('successful ajax requset regform');
+                    console.log(JSON.stringify(data));
+
+                    // $('#course-div').html(' ');
+
+                    $('#course-div').append(
+                      '<div id="checkArray">'
+                    );
+
+                    for(var i = 0 ; i<data.length;i++){
+
+                      var course_name = data[i].name;
+                      console.log(course_name);
+                      var code = data[i].code;
+                      $('#course-div').append(
+                            '<input type="checkbox" name="chk[]" id="' + code +'" value="' + code + '">' + code + ': ' + course_name + '&nbsp' + 
+                            '<span style="margin-left:1.5%; color:#B03A2E;"><b>(Credit : '+ data[i].credit + ')</b></span>' +
+                            '<br>'
+                      );
+                      if (i == data.length-1){
+                        $('#course-div').append(
+                          '</div>'
+                        );
+                      }
+                    }
+                    ///load 3-2 courses
+                 if (cur.level >2 || (cur.level==2 && cur.term ==2)){
+                  $.ajax({
+                      type : 'POST' ,
+                      url: '/student/registration?id=' + uname,
+                      data: {lvl: 2, term: 2},
+                      success: function(data) {
+                          console.log('successful ajax requset regform');
+                          console.log(JSON.stringify(data));
+
+                          // $('#course-div').html(' ');
+
+                          $('#course-div').append(
+                            '<div id="checkArray">'
+                          );
+
+                          for(var i = 0 ; i<data.length;i++){
+
+                            var course_name = data[i].name;
+                            console.log(course_name);
+                            var code = data[i].code;
+                            $('#course-div').append(
+                            '<input type="checkbox" name="chk[]" id="' + code +'" value="' + code + '">' + code + ': ' + course_name + '&nbsp' + 
+                            '<span style="margin-left:1.5%; color:#B03A2E;"><b>(Credit : '+ data[i].credit + ')</b></span>' +
+                            '<br>'
+                      );
+                            if (i == data.length-1){
+                              $('#course-div').append(
+                                '</div>'
+                              );
+                            }
+                          }
+                          ///load 3-1 courses
+                 if (cur.level >= 3){
+                  $.ajax({
+                      type : 'POST' ,
+                      url: '/student/registration?id=' + uname,
+                      data: {lvl: 3, term: 1},
+                      success: function(data) {
+                          console.log('successful ajax requset regform');
+                          console.log(JSON.stringify(data));
+
+                          // $('#course-div').html(' ');
+
+                          $('#course-div').append(
+                            '<div id="checkArray">'
+                          );
+
+                          for(var i = 0 ; i<data.length;i++){
+
+                            var course_name = data[i].name;
+                            console.log(course_name);
+                            var code = data[i].code;
+                            $('#course-div').append(
+                            '<input type="checkbox" name="chk[]" id="' + code +'" value="' + code + '">' + code + ': ' + course_name + '&nbsp' + 
+                            '<span style="margin-left:1.5%; color:#B03A2E;"><b>(Credit : '+ data[i].credit + ')</b></span>' +
+                            '<br>'
+                        );
+                            if (i == data.length-1){
+                              $('#course-div').append(
+                                '</div>'
+                              );
+                            }
+                          }
+                      ///2-2 load  
+                if (cur.level > 3 || (cur.level == 3 && cur.term == 2) ){
+                  $.ajax({
+                      type : 'POST' ,
+                      url: '/student/registration?id=' + uname,
+                      data: {lvl: 3, term: 2},
+                      success: function(data) {
+                          console.log('successful ajax requset regform');
+                          console.log(JSON.stringify(data));
+
+                          // $('#course-div').html(' ');
+
+                          $('#course-div').append(
+                            '<div id="checkArray">'
+                          );
+
+                          for(var i = 0 ; i<data.length;i++){
+
+                            var course_name = data[i].name;
+                            console.log(course_name);
+                            var code = data[i].code;
+                            $('#course-div').append(
+                            '<input type="checkbox" name="chk[]" id="' + code +'" value="' + code + '">' + code + ': ' + course_name + '&nbsp' + 
+                            '<span style="margin-left:1.5%; color:#B03A2E;"><b>(Credit : '+ data[i].credit + ')</b></span>' +
+                            '<br>'
+                        );
+                            if (i == data.length-1){
+                              $('#course-div').append(
+                                '</div>'
+                              );
+                            }
+                          }
+                 if (cur.level >= 4){
+                  $.ajax({
+                      type : 'POST' ,
+                      url: '/student/registration?id=' + uname,
+                      data: {lvl: 4, term: 1},
+                      success: function(data) {
+                          console.log('successful ajax requset regform');
+                          console.log(JSON.stringify(data));
+
+                          // $('#course-div').html(' ');
+
+                          $('#course-div').append(
+                            '<div id="checkArray">'
+                          );
+
+                          for(var i = 0 ; i<data.length;i++){
+
+                            var course_name = data[i].name;
+                            console.log(course_name);
+                            var code = data[i].code;
+                            $('#course-div').append(
+                            '<input type="checkbox" name="chk[]" id="' + code +'" value="' + code + '">' + code + ': ' + course_name + '&nbsp' + 
+                            '<span style="margin-left:1.5%; color:#B03A2E;"><b>(Credit : '+ data[i].credit + ')</b></span>' +
+                            '<br>'
+                        );
+                            if (i == data.length-1){
+                              $('#course-div').append(
+                                '</div>'
+                              );
+                            }
+                          }
+                      }///success 2-1
+
+                  });///end of 2-1 courses
+                }///end if level >= 2-1
+                      }///success 2-2
+
+                  });///end of 2-2 courses
+                }///end if level >= 2-2
+                      }///success 3-1
+
+                  });///end of 3-1 courses
+                }///end if level > 3-1
+                        
+                      }///success 3-2
+
+                  });///end of 3-2 courses
+                }///end if level > 3-2
+              }///success 4-1
+
+            });///end of 4-1 courses
+          }///end if level > 4
+          
+       
+          
+              
+          
+          
+          
+        }///end success function
+    });
+    
+    
+});
+  
+  ///Logout
+  $('#signout').click(function(){
+    console.log("logout clicked");
+    localStorage.clear();
+    window.location.href = "/login";
+  });
+  
+  ///student session check 
+  function checkStudentSession(){
+    var user = localStorage.getItem('myUserEntity');
+    user = JSON.parse(user);
+    if(user === null || user === '') {
+      window.location.href = "/login";
+      return;
+    }
+    if (user.usertype != "student"){
+      window.location.href = '/' + user.usertype + '/profile';
+      return;
+    }
+  }
+  
+  var fsub = {
+  "CSE-401" : ["System Analysis, Design and Development", 3.0],
+  "CSE-402" : ["System Analysis, Design and Development Sessional", 1.5],
+  "CSE-403" : ["Artificial Intelligence", 3.0],
+  "CSE-404" : ["Artificial Intelligence Sessional", 0.75],
+  "CSE-406" : ["Computer Interfacing Sessional", 0.75],           
+  "CSE-407" : ["Applied Statistics and Queuing Theory", 3.0],
+  "CSE-405" : ["Computer Interfacing", 3.0],
+  "CSE-421" : ["Graph Theory", 3.0],
+  "CSE-427" : ["Digital Image Processing", 3.0],
+
+  "CSE-311" : ["Numerical Analysis", 3.0],
+  "CSE-315" : ["Digital System Design", 3.0],
+  "CSE-317" : ["Data Communication", 3.0],
+  "CSE-319" : ["Software Engineering", 3.0],
+
+
+  "CSE-301" : ["Database Management System", 3.0],
+  "CSE-303" : ["Compiler", 3.0],
+  "CSE-304" : ["Compiler Sessional", 0.75],
+  "CSE-308" : ["Operating System Sessional", 0.75],
+
+
+  "CSE-213" : ["Computer Architecture", 3.0],
+  "CSE-215" : ["Algorithms", 3.0],
+  "CSE-216" : ["Algorithms Sessional", 3.0],
+  "CSE-217" : ["Theory of Computation", 3.0],
+
+
+  "CSE-201" : ["Digital Logic Design", 3.0],
+  "CSE-202" : ["Digital Logic Design Sessional", 1.5],
+  "CSE-203" : ["Data Structures", 3.0],
+  "CSE-204" : ["Data Structures Sessional", 1.5],
+
+
+}
+  
+</script>
+  
+
+
+</body>
+  
+</html>

@@ -1,0 +1,1490 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<head>
+<style>
+
+h1, h2, h3, h4, h5, h6, body{
+     font-family: , 'Arial',calibri, sans-sarif; 
+}
+
+
+* {
+    font-family: Arial;
+}
+
+body {
+padding: 0;
+margin: 0;
+}
+
+
+.header {
+    background-color: #6B7A8F;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    
+}
+
+.header2 {
+    background-color: #DCC7AA;
+    text-align: center;
+    color: black;
+    padding: 0.5px;
+    width: 100%;
+    left: ;
+    right: ;
+    border-color: black;
+    border : 10%;
+    
+}
+ul {
+
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  /*  position: -webkit-sticky; /* Safari */
+  /*  position: sticky;  */
+    top: 0;
+    border: 1px solid #F7882F;
+    background-color: #F7882F;
+    
+}
+
+li {
+    float: right;
+    background-color: #F7882F;
+   
+}
+
+li a, .dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+
+
+.active {
+    background-color: #F7C331;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+    background-color: #F7C331;
+}
+
+li.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    border: 1px solid #e7e7e7;
+    background-color: #ABD1D9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+
+       background-color: #D9FFF7;
+}
+
+.dropdown:hover .dropdown-content {
+    
+    display: block;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+}
+
+
+
+.img{
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+   
+
+
+}
+
+
+.container:hover .image {
+  opacity: 0.3;
+}
+
+.container:hover .middle {
+
+  opacity: 1;
+}
+
+
+
+
+
+.container1, .container2 {
+    position: absolute;
+    left:300;
+    right:300;
+    height:400px; /* based on screen size */
+}
+.container1 {
+    top: 0;
+}
+.container2 {
+    bottom: 0;
+}
+
+
+/* Create three equal columns that floats next to each other */
+.column {
+  
+    float: left;
+    padding: 10px;
+    margin: 10px;
+    height: 800px;
+
+}
+
+.left, .right {
+  width: 20%;
+}
+
+.middle {
+  width: 35%;
+}
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width:600px) {
+    .column {
+        width: 100%;
+    }
+}
+
+
+
+.meter { 
+  height: 20px;  /* Can be anything */
+  position: relative;
+  background: #544E6E;
+  -moz-border-radius: 25px;
+  -webkit-border-radius: 25px;
+  border-radius: 25px;
+  padding: 10px;
+  box-shadow: inset 0 -1px 1px rgba(255,255,255,0.3);
+}
+
+
+.meter > span {
+  display: block;
+  height: 100%;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  background-color: #ABD1D9;
+  background-image: linear-gradient(
+    center bottom,
+    rgb(43,194,83) 37%,
+    rgb(84,240,84) 69%
+  );
+  box-shadow: 
+    inset 0 2px 9px  rgba(255,255,255,0.3),
+    inset 0 -2px 6px rgba(0,0,0,0.4);
+  position: relative;
+  overflow: hidden;
+}
+
+
+.notifications {
+      position: absolute;
+      border-radius:2px;
+      font-size:14px;
+      background-color:red;
+      color:#fff;
+      padding:2px 5px;
+      top:145px;
+      right:2px;
+    }
+
+
+.badge1 {
+   position:relative;
+}
+
+
+
+.badge1[data-badge]:after {
+   content:attr(data-badge);
+   position:absolute;
+   top:-30px;
+   right:-15px;
+   font-size:.7em;
+   background:green;
+   color:white;
+   width:18px;height:18px;
+   text-align:center;
+   line-height:18px;
+   border-radius:50%;
+   box-shadow:0 0 1px #333;
+}
+
+
+progress {
+       text-align: center;
+ }
+
+progress:after {
+ background-color: #fff;
+  content: attr(value)'%';
+}
+
+
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+
+
+
+
+
+ .container1 {
+ margin:20px auto; 
+ 
+}
+.panel {
+  overflow:hidden;
+}
+.btn-block {
+  padding:1em 0;
+  border-radius:0;
+  font-weight:700;
+  font-size:1.25em;
+}
+table, th, td {
+    border: 0.5px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 0.2px;
+    text-align: center;    
+}
+
+    /* The Modal (background) */
+    .modal {
+        max-height: calc(100vh - 210px);
+        overflow-y: auto;
+        overflow-x: auto;
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        padding-top: 10px; /* Location of the box */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    }
+
+    /* Modal Content */
+    .modal-content {
+        position: relative;
+        background-color: #fefefe;
+        margin: auto;
+        padding: 0;
+        border: 1px solid #888;
+        width: 100%;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+        -webkit-animation-name: animatetop;
+        -webkit-animation-duration: 0.4s;
+        animation-name: animatetop;
+        animation-duration: 0.4s
+    }
+
+    /* Add Animation */
+    @-webkit-keyframes animatetop {
+        from {top:-300px; opacity:0} 
+        to {top:0; opacity:1}
+    }
+
+    @keyframes animatetop {
+        from {top:-300px; opacity:0}
+        to {top:0; opacity:1}
+    }
+
+    /* The Close Button */
+    .close {
+        color: white;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    .modal-header {
+        padding: 2px 16px;
+        background-color: #5cb85c;
+        color: white;
+    }
+
+    .modal-body {padding: 2px 16px;}
+
+    .modal-footer {
+        padding: 2px 16px;
+        background-color: #5cb85c;
+        color: white;
+    }
+
+
+    .button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+.button:hover {
+    background-color: #5abc5e; /* Green */
+    color: white;
+}
+
+
+
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Course Registration System</h1>
+  <h3>Military Institute Of Science and Technology</h3>
+</div>
+
+<ul>
+  <li><a  href="#home">Logout</a></li>
+<li><a href="settings.html">Settings</a></li>
+   <li><a href="student.html">Students</a></li>
+  <li  class="active" class="dropdown"><a href="notification.html">Notifications<div class="badge1" data-badge="3"></div></a>
+    
+    <div class="dropdown-content">
+      <a >Student A sent a request</a>
+      <a >Student B send a request</a>
+      <a >Student c send a request</a>
+      <a  href="notification.html" style="size: 0.5px">See more</a>
+    </div>
+    </li>
+    <li><a  href="index.html">Profile</a></li>
+  </li>
+</ul>
+
+  
+
+
+
+
+
+<div class="header2">
+  <h3>Notifications</h3>
+
+</div>
+
+
+<div class="row">
+<div class="w3-container">
+  <h2>Students List</h2>
+  <p></p>
+  <ul class="w3-ul w3-card-4">
+    <li class="w3-bar" style="background-color: #FFF">
+       
+      <img src="img_avatar2.png" class="w3-bar-item w3-circle w3-hide-small" style="width:85px">
+      <div class="w3-bar-item">
+        <span class="w3-large">Student A</span><br>
+        <span>Click to see the course list</span>
+       
+         
+      </div>
+      <div style="float:right">
+
+
+       <!-- Trigger/Open The Modal -->
+<button class="button" id="myBtn1">See Registration Form</button>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      
+      <span class="close">&times;</span>
+      <h2>Registration Form</h2>
+    </div>
+    <div class="modal-body">
+      
+
+
+
+<div>
+    <div>
+        
+        <div>
+            <div>
+                <div>
+                    <form>
+                        <div>
+                            <div>
+                                <div>
+                                    <label for="username">
+                                        Department:
+                                    </label>
+                                    <select name="slbox">
+                                        <option>
+                                            CSE
+                                        </option>
+                                        <option>
+                                            CE
+                                        </option>
+                                        <option>
+                                            EECE
+                                        </option>
+                                        <option>
+                                            ME
+                                        </option>
+                                        <option>
+                                            AE
+                                        </option>
+                                        <option>
+                                            NAME
+                                        </option>
+                                        <option>
+                                            BME
+                                        </option>
+                                        <option>
+                                            NSE
+                                        </option>
+                                        <option>
+                                            EWCE
+                                        </option>
+                                        <option>
+                                            IPE
+                                        </option>
+                                        <option>
+                                            PME
+                                        </option>
+                                        <option>
+                                            ARCHI
+                                        </option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div>
+                                <div>
+                                    <label for="username">
+                                        Picture:
+                                    </label>
+                                    <input accept="image/*" name="pic" type="file" />
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <div>
+                        <label for="username">
+                            Session:
+                        </label>
+                        <div>
+                            <input type="text" placeholder="Session" />
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <label for="firstname">
+                                Level:
+                            </label>
+                            <select name="slbox">
+                                <option>
+                                    1
+                                </option>
+                                <option>
+                                    2
+                                </option>
+                                <option>
+                                    3
+                                </option>
+                                <option>
+                                    4
+                                </option>
+                            </select>
+                            <label for="firstname">
+                                Term:
+                            </label>
+                            <select name="slbox">
+                                <option>
+                                    1
+                                </option>
+                                <option>
+                                    2
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="username">
+                            Name of Student:
+                        </label>
+                        <div>
+                            <input type="text" placeholder="Name of Student" />
+                        </div>
+                    </div>
+                    <div>
+                        <label for="username">
+                            Registration No:
+                        </label>
+                        <div>
+                            <input type="number" placeholder="Registration No" />
+                        </div>
+                    </div>
+                    <div>
+                        <label for="username">
+                            Roll No:
+                        </label>
+                        <div>
+                            <input type="number" placeholder="Roll No" />
+                        </div>
+                    </div>
+                    <header>
+                        Previous Results (GPA):
+                    </header>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <th colspan="2">
+                                    Level 1
+                                </th>
+                                <th colspan="2">
+                                    Level 2
+                                </th>
+                                <th colspan="2">
+                                    Level 3
+                                </th>
+                                <th colspan="2">
+                                    Level 4
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Term 1
+                                </td>
+                                <td>
+                                    Term 2
+                                </td>
+                                <td>
+                                    Term 1
+                                </td>
+                                <td>
+                                    Term 2
+                                </td>
+                                <td>
+                                    Term 1
+                                </td>
+                                <td>
+                                    Term 2
+                                </td>
+                                <td>
+                                    Term 1
+                                </td>
+                                <td>
+                                    Term 2
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="text" placeholder=" - " />
+                                </td>
+                                <td>
+                                    <input type="text" placeholder=" - " />
+                                </td>
+                                <td>
+                                    <input type="text" placeholder=" - " />
+                                </td>
+                                <td>
+                                    <input type="text" placeholder=" - " />
+                                </td>
+                                <td>
+                                    <input type="text" placeholder=" - " />
+                                </td>
+                                <td>
+                                    <input type="text" placeholder=" - " />
+                                </td>
+                                <td>
+                                    <input type="text" placeholder=" - " />
+                                </td>
+                                <td>
+                                    <input type="text" placeholder=" - " />
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <header>
+                        Courses Offered By Department:
+                    </header>
+                    <div>
+                        <div>
+                            <input name="fieldset-5" type="checkbox" />
+                            <label for="checkbox-example-one">
+                                Subject Title
+                            </label>
+                        </div>
+                        <div>
+                            <input name="fieldset-5" type="checkbox" />
+                            <label for="checkbox-example-two">
+                                Subject Title
+                            </label>
+                        </div>
+                        <div>
+                            <input name="fieldset-5" type="checkbox" />
+                            <label for="checkbox-example-two">
+                                Subject Title
+                            </label>
+                        </div>
+                        <div>
+                            <input name="fieldset-5" type="checkbox" />
+                            <label for="checkbox-example-two">
+                                Subject Title
+                            </label>
+                        </div>
+                        <div>
+                            <input name="fieldset-5" type="checkbox" />
+                            <label for="checkbox-example-two">
+                                Subject Title
+                            </label>
+                        </div>
+                        <div>
+                            <input name="fieldset-5" type="checkbox" />
+                            <label for="checkbox-example-two">
+                                Subject Title
+                            </label>
+                        </div>
+                        <div>
+                            <input name="fieldset-5" type="checkbox" />
+                            <label for="checkbox-example-two">
+                                Subject Title
+                            </label>
+                        </div>
+                        <div>
+                            <input name="fieldset-5" type="checkbox" />
+                            <label for="checkbox-example-three">
+                                Subject Title
+                            </label>
+                        </div>
+                        <div>
+                            <input name="fieldset-5" type="checkbox" />
+                            <label for="checkbox-example-four">
+                                Subject Title
+                            </label>
+                        </div>
+                        <div>
+                            <input name="fieldset-5" type="checkbox" />
+                            <label for="checkbox-example-five">
+                                Subject Title
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+    <div class="modal-footer">
+        <button  style="float: right" style="background-color: red" class="button">Decline</button>
+       <button  style="float: right" class="button">Accept</button>
+
+    </div>
+  </div>
+
+</div>
+
+
+
+
+
+
+         
+    </div>
+           <p>Registartion Progress : </p>
+          <progress style="float:left" value="25" max="100">
+
+    </li>
+
+    <li class="w3-bar" style="background-color: #FFF">
+       
+      <img src="img_avatar5.png" class="w3-bar-item w3-circle w3-hide-small" style="width:85px">
+      <div class="w3-bar-item">
+       <span class="w3-large">Student B</span><br>
+        <span>Click to see the course list</span>
+      </div>
+      <div style="float:right">
+
+       <!-- Trigger/Open The Modal -->
+<button class="button" id="myBtn2">See Registration Form</button>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      
+      <span class="close">&times;</span>
+      <h2>Registration Form</h2>
+    </div>
+    <div class="modal-body">
+      
+
+
+
+<div>
+    <div>
+        
+        <div>
+            <div>
+                <div>
+                    <form>
+                        <div>
+                            <div>
+                                <div>
+                                    <label for="username">
+                                        Department:
+                                    </label>
+                                    <select name="slbox">
+                                        <option>
+                                            CSE
+                                        </option>
+                                        <option>
+                                            CE
+                                        </option>
+                                        <option>
+                                            EECE
+                                        </option>
+                                        <option>
+                                            ME
+                                        </option>
+                                        <option>
+                                            AE
+                                        </option>
+                                        <option>
+                                            NAME
+                                        </option>
+                                        <option>
+                                            BME
+                                        </option>
+                                        <option>
+                                            NSE
+                                        </option>
+                                        <option>
+                                            EWCE
+                                        </option>
+                                        <option>
+                                            IPE
+                                        </option>
+                                        <option>
+                                            PME
+                                        </option>
+                                        <option>
+                                            ARCHI
+                                        </option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div>
+                                <div>
+                                    <label for="username">
+                                        Picture:
+                                    </label>
+                                    <input accept="image/*" name="pic" type="file" />
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <div>
+                        <label for="username">
+                            Session:
+                        </label>
+                        <div>
+                            <input type="text" placeholder="Session" />
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <label for="firstname">
+                                Level:
+                            </label>
+                            <select name="slbox">
+                                <option>
+                                    1
+                                </option>
+                                <option>
+                                    2
+                                </option>
+                                <option>
+                                    3
+                                </option>
+                                <option>
+                                    4
+                                </option>
+                            </select>
+                            <label for="firstname">
+                                Term:
+                            </label>
+                            <select name="slbox">
+                                <option>
+                                    1
+                                </option>
+                                <option>
+                                    2
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="username">
+                            Name of Student:
+                        </label>
+                        <div>
+                            <input type="text" placeholder="Name of Student" />
+                        </div>
+                    </div>
+                    <div>
+                        <label for="username">
+                            Registration No:
+                        </label>
+                        <div>
+                            <input type="number" placeholder="Registration No" />
+                        </div>
+                    </div>
+                    <div>
+                        <label for="username">
+                            Roll No:
+                        </label>
+                        <div>
+                            <input type="number" placeholder="Roll No" />
+                        </div>
+                    </div>
+                    <header>
+                        Previous Results (GPA):
+                    </header>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <th colspan="2">
+                                    Level 1
+                                </th>
+                                <th colspan="2">
+                                    Level 2
+                                </th>
+                                <th colspan="2">
+                                    Level 3
+                                </th>
+                                <th colspan="2">
+                                    Level 4
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Term 1
+                                </td>
+                                <td>
+                                    Term 2
+                                </td>
+                                <td>
+                                    Term 1
+                                </td>
+                                <td>
+                                    Term 2
+                                </td>
+                                <td>
+                                    Term 1
+                                </td>
+                                <td>
+                                    Term 2
+                                </td>
+                                <td>
+                                    Term 1
+                                </td>
+                                <td>
+                                    Term 2
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="text" placeholder=" - " />
+                                </td>
+                                <td>
+                                    <input type="text" placeholder=" - " />
+                                </td>
+                                <td>
+                                    <input type="text" placeholder=" - " />
+                                </td>
+                                <td>
+                                    <input type="text" placeholder=" - " />
+                                </td>
+                                <td>
+                                    <input type="text" placeholder=" - " />
+                                </td>
+                                <td>
+                                    <input type="text" placeholder=" - " />
+                                </td>
+                                <td>
+                                    <input type="text" placeholder=" - " />
+                                </td>
+                                <td>
+                                    <input type="text" placeholder=" - " />
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <header>
+                        Courses Offered By Department:
+                    </header>
+                    <div>
+                        <div>
+                            <input name="fieldset-5" type="checkbox" />
+                            <label for="checkbox-example-one">
+                                Subject Title
+                            </label>
+                        </div>
+                        <div>
+                            <input name="fieldset-5" type="checkbox" />
+                            <label for="checkbox-example-two">
+                                Subject Title
+                            </label>
+                        </div>
+                        <div>
+                            <input name="fieldset-5" type="checkbox" />
+                            <label for="checkbox-example-two">
+                                Subject Title
+                            </label>
+                        </div>
+                        <div>
+                            <input name="fieldset-5" type="checkbox" />
+                            <label for="checkbox-example-two">
+                                Subject Title
+                            </label>
+                        </div>
+                        <div>
+                            <input name="fieldset-5" type="checkbox" />
+                            <label for="checkbox-example-two">
+                                Subject Title
+                            </label>
+                        </div>
+                        <div>
+                            <input name="fieldset-5" type="checkbox" />
+                            <label for="checkbox-example-two">
+                                Subject Title
+                            </label>
+                        </div>
+                        <div>
+                            <input name="fieldset-5" type="checkbox" />
+                            <label for="checkbox-example-two">
+                                Subject Title
+                            </label>
+                        </div>
+                        <div>
+                            <input name="fieldset-5" type="checkbox" />
+                            <label for="checkbox-example-three">
+                                Subject Title
+                            </label>
+                        </div>
+                        <div>
+                            <input name="fieldset-5" type="checkbox" />
+                            <label for="checkbox-example-four">
+                                Subject Title
+                            </label>
+                        </div>
+                        <div>
+                            <input name="fieldset-5" type="checkbox" />
+                            <label for="checkbox-example-five">
+                                Subject Title
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+    <div class="modal-footer">
+        <button  style="float: right" style="background-color: red" class="button">Decline</button>
+       <button  style="float: right" class="button">Accept</button>
+
+    </div>
+  </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+    
+</div>
+      <p>Registartion Progress : </p>
+      <progress style="float:left" value="65" max="100">
+    </li>
+
+    <li class="w3-bar" style="background-color: #FFF">
+       
+      <img src="img_avatar6.png" class="w3-bar-item w3-circle w3-hide-small" style="width:85px">
+      <div class="w3-bar-item">
+        <span class="w3-large">Student C</span><br>
+        <span>Click to see the course list</span>
+      </div>
+      <div style="float:right">
+        
+
+
+       <!-- Trigger/Open The Modal -->
+<button class="button" id="myBtn3">See Registration Form</button>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      
+      <span class="close">&times;</span>
+      <h2>Registration Form</h2>
+    </div>
+    <div class="modal-body">
+      
+
+
+
+<div>
+    <div>
+        
+        <div>
+            <div>
+                <div>
+                    <form>
+                        <div>
+                            <div>
+                                <div>
+                                    <label for="username">
+                                        Department:
+                                    </label>
+                                    <select name="slbox">
+                                        <option>
+                                            CSE
+                                        </option>
+                                        <option>
+                                            CE
+                                        </option>
+                                        <option>
+                                            EECE
+                                        </option>
+                                        <option>
+                                            ME
+                                        </option>
+                                        <option>
+                                            AE
+                                        </option>
+                                        <option>
+                                            NAME
+                                        </option>
+                                        <option>
+                                            BME
+                                        </option>
+                                        <option>
+                                            NSE
+                                        </option>
+                                        <option>
+                                            EWCE
+                                        </option>
+                                        <option>
+                                            IPE
+                                        </option>
+                                        <option>
+                                            PME
+                                        </option>
+                                        <option>
+                                            ARCHI
+                                        </option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div>
+                                <div>
+                                    <label for="username">
+                                        Picture:
+                                    </label>
+                                    <input accept="image/*" name="pic" type="file" />
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <div>
+                        <label for="username">
+                            Session:
+                        </label>
+                        <div>
+                            <input type="text" placeholder="Session" />
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <label for="firstname">
+                                Level:
+                            </label>
+                            <select name="slbox">
+                                <option>
+                                    1
+                                </option>
+                                <option>
+                                    2
+                                </option>
+                                <option>
+                                    3
+                                </option>
+                                <option>
+                                    4
+                                </option>
+                            </select>
+                            <label for="firstname">
+                                Term:
+                            </label>
+                            <select name="slbox">
+                                <option>
+                                    1
+                                </option>
+                                <option>
+                                    2
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="username">
+                            Name of Student:
+                        </label>
+                        <div>
+                            <input type="text" placeholder="Name of Student" />
+                        </div>
+                    </div>
+                    <div>
+                        <label for="username">
+                            Registration No:
+                        </label>
+                        <div>
+                            <input type="number" placeholder="Registration No" />
+                        </div>
+                    </div>
+                    <div>
+                        <label for="username">
+                            Roll No:
+                        </label>
+                        <div>
+                            <input type="number" placeholder="Roll No" />
+                        </div>
+                    </div>
+                    <header>
+                        Previous Results (GPA):
+                    </header>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <th colspan="2">
+                                    Level 1
+                                </th>
+                                <th colspan="2">
+                                    Level 2
+                                </th>
+                                <th colspan="2">
+                                    Level 3
+                                </th>
+                                <th colspan="2">
+                                    Level 4
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Term 1
+                                </td>
+                                <td>
+                                    Term 2
+                                </td>
+                                <td>
+                                    Term 1
+                                </td>
+                                <td>
+                                    Term 2
+                                </td>
+                                <td>
+                                    Term 1
+                                </td>
+                                <td>
+                                    Term 2
+                                </td>
+                                <td>
+                                    Term 1
+                                </td>
+                                <td>
+                                    Term 2
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="text" placeholder=" - " />
+                                </td>
+                                <td>
+                                    <input type="text" placeholder=" - " />
+                                </td>
+                                <td>
+                                    <input type="text" placeholder=" - " />
+                                </td>
+                                <td>
+                                    <input type="text" placeholder=" - " />
+                                </td>
+                                <td>
+                                    <input type="text" placeholder=" - " />
+                                </td>
+                                <td>
+                                    <input type="text" placeholder=" - " />
+                                </td>
+                                <td>
+                                    <input type="text" placeholder=" - " />
+                                </td>
+                                <td>
+                                    <input type="text" placeholder=" - " />
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <header>
+                        Courses Offered By Department:
+                    </header>
+                    <div>
+                        <div>
+                            <input name="fieldset-5" type="checkbox" />
+                            <label for="checkbox-example-one">
+                                Subject Title
+                            </label>
+                        </div>
+                        <div>
+                            <input name="fieldset-5" type="checkbox" />
+                            <label for="checkbox-example-two">
+                                Subject Title
+                            </label>
+                        </div>
+                        <div>
+                            <input name="fieldset-5" type="checkbox" />
+                            <label for="checkbox-example-two">
+                                Subject Title
+                            </label>
+                        </div>
+                        <div>
+                            <input name="fieldset-5" type="checkbox" />
+                            <label for="checkbox-example-two">
+                                Subject Title
+                            </label>
+                        </div>
+                        <div>
+                            <input name="fieldset-5" type="checkbox" />
+                            <label for="checkbox-example-two">
+                                Subject Title
+                            </label>
+                        </div>
+                        <div>
+                            <input name="fieldset-5" type="checkbox" />
+                            <label for="checkbox-example-two">
+                                Subject Title
+                            </label>
+                        </div>
+                        <div>
+                            <input name="fieldset-5" type="checkbox" />
+                            <label for="checkbox-example-two">
+                                Subject Title
+                            </label>
+                        </div>
+                        <div>
+                            <input name="fieldset-5" type="checkbox" />
+                            <label for="checkbox-example-three">
+                                Subject Title
+                            </label>
+                        </div>
+                        <div>
+                            <input name="fieldset-5" type="checkbox" />
+                            <label for="checkbox-example-four">
+                                Subject Title
+                            </label>
+                        </div>
+                        <div>
+                            <input name="fieldset-5" type="checkbox" />
+                            <label for="checkbox-example-five">
+                                Subject Title
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+    <div class="modal-footer">
+        <button  style="float: right" style="background-color: red" class="button">Decline</button>
+       <button  style="float: right" class="button">Accept</button>
+
+    </div>
+  </div>
+
+</div>
+
+
+
+
+
+
+
+     </div>
+         <p>Registartion Progress : </p>
+
+         <progress style="float:left" value="10" max="100">
+    </li>
+  </ul>
+</div>
+</div>
+
+
+
+    <script>
+    // Get the modal
+    var modal = document.getElementById('myModal');
+
+    // Get the button that opens the modal
+    var btn1 = document.getElementById("myBtn1");
+    var btn2 = document.getElementById("myBtn2");
+    var btn3 = document.getElementById("myBtn3");
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks the button, open the modal 
+    btn1.onclick = function() {
+        modal.style.display = "block";
+    }
+
+    btn2.onclick = function() {
+        modal.style.display = "block";
+    }
+
+    btn3.onclick = function() {
+        modal.style.display = "block";
+    }
+
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+
+
+    </script>
+
+
+
+
+
+
+</body>
+</html>
+

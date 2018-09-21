@@ -1,0 +1,624 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!--    <link rel="stylesheet" href="css/style.css"> -->
+   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link href="https://fonts.googleapis.com/css?family=Secular One" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Rubik Mono One" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Suez One" rel="stylesheet">
+   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!--   <script src="jquery-3.3.1.min.js"></script> -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="/client.js"></script>
+<!--   <link rel="stylesheet" href="css/style.css"> -->
+
+
+<style>
+
+#headr{
+background-color:#65ccb8;
+color:black;
+font-family:Helvetica;
+padding:20px;
+padding-left:0px;
+padding-right:0px;
+height: 180px;
+border-bottom: solid 2px #eee;}
+ 
+ 
+ select:focus {
+        min-width: 150px;
+        width: auto;
+ } 
+ 
+ #navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color:#182628;
+    position:relative; 
+    top:20px;
+}
+
+
+
+#image{
+   position: relative;
+   left: 10px;
+   top:  30px;
+ 
+    height: 244px;
+    width: 240px;
+  background-color:lightblue;
+
+}
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.navli {
+    float: right;
+}
+
+.progli {
+    float: left;
+  
+}
+.notifi{
+    display: inline-block;
+    color: black;
+    text-align: center;
+    padding-top :14px;
+  padding-left:14px;
+  padding-right:0px;
+  padding-left:14px
+    text-decoration: none;
+  float: right;
+}
+
+li a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active){
+    background-color: #ddd;
+}
+
+li a.active {
+    color: white;
+    background-color:#57ba98;
+}
+
+
+nav {
+    position: relative;
+  top:0x;
+  background-color:#57ba98;
+    float: left;
+    max-width: 244px;
+    margin: 0;
+  height:1000px;
+    padding: 1em;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+  
+}
+   
+nav ul a {
+    text-decoration: none;
+}
+
+article {
+    position: relative;
+    top:  0px;
+    margin-left:300px;
+  margin-right:250px
+    border-left: 1px solid green;
+    padding: 1em;
+    overflow: hidden;
+  height:850px;
+  background-color:#f9f3e0;
+}
+<--calender  -->
+* {box-sizing: border-box;}
+
+ .month {
+    padding: 30px 25px;
+    width: 100%;
+    background: #65ccb8;
+    text-align: center;
+}
+
+.month ul {
+    margin: 0;
+    padding: 0;
+}
+
+.month ul li {
+    color: white;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+  text-align: center;
+}
+
+.month .prev {
+    float: left;
+    padding-top: 10px;
+}
+
+.month .next {
+    float: right;
+    padding-top: 10px;
+}
+
+.weekdays {
+    margin: 0;
+    padding: 8px 0;
+    background-color: #ddd;
+}
+
+.weekdays li {
+    display: inline-block;
+    width: 12%;
+    color: #666;
+    text-align: center;
+}
+
+.days {
+    padding: 8px 0;
+    background: #eee;
+    margin: 0;
+}
+
+.days li {
+    list-style-type: none;
+    display: inline-block;
+    width: 12%;
+    text-align: center;
+    margin-bottom: 5px;
+    font-size:12px;
+    color: #777;
+}
+
+.days li .active {
+    padding: 5px;
+    background: #65ccb8;
+    color: white !important
+}
+
+/* Add media queries for smaller screens */
+@media screen and (max-width:720px) {
+    .weekdays li, .days li {width: 13.1%;}
+}
+
+@media screen and (max-width: 420px) {
+    .weekdays li, .days li {width: 12.5%;}
+    .days li .active {padding: 2px;}
+}
+
+@media screen and (max-width: 290px) {
+    .weekdays li, .days li {width: 12.2%;}
+}
+
+<-->
+
+@-webkit-keyframes myanimation {
+  from {
+    left: 0%;
+  }
+  to {
+    left: 50%;
+  }
+}
+h1 {
+  text-align: center;
+  font-family: 'PT Sans Caption', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  padding: 20px 0;
+  color: #777;
+}
+
+
+.badge1 {
+   position:relative;
+/*   margin-left: 10%; */
+}
+
+
+
+.badge1[data-badge]:after {
+   content:attr(data-badge);
+   position:absolute;
+   top:-30px;
+   right:-15px;
+   font-size:.7em;
+   background:green;
+   color:white;
+   width:18px;height:18px;
+   text-align:center;
+   line-height:18px;
+   border-radius:50%;
+   box-shadow:0 0 1px #333;
+/*     margin-left: 20%; */
+}
+  
+</style>
+</head>
+<body>
+
+<div id="headr">
+<h2 style="text-align:center;font-size:30px"><b>Online Course Registration</b></h2>
+<h4 style="text-align:center;">Military Institute of Science and Technology</h4>
+<ul id="navbar">
+  <li class="navli"><a href="" id="signout">Logout</a></li>
+  <li class="navli"><a href="/student/settings">Settings</a></li>
+  <li class="navli"><a href="#prog">Progress</a></li>
+ 
+    <li  class="navli"><a href="/student/notification">Notifications<div id="bd1" class="badge1" data-badge=""></div></a> </li>
+  <li class="navli"><a href="/student/registration">Registration</a></li>
+  <li class="navli"><a class="active" href="/student/profile">Profile</a></li>
+</ul>
+</div>
+
+
+<nav>
+  <div id="image">
+  <img src="http://www.personalbrandingblog.com/wp-content/uploads/2017/08/blank-profile-picture-973460_640-300x300.png" alt="promawesome" class="round" height="244px" width="240px">
+  <br><br><br>
+  <div class="month">      
+  <ul class="month">
+    <li>
+       May<br>
+      <span style="font-size:14px;position:relative;left:30px">2018</span>
+    </li>
+  </ul>
+</div>
+
+<ul class="weekdays">
+  <li>Tu</li>
+  <li>We</li>
+  <li>Th</li>
+  <li>Fr</li>
+  <li>Sa</li>
+  <li>Su</li>
+  <li>Mo</li>
+</ul>
+
+<ul class="days">  
+  <li>1</li>
+  <li>2</li>
+  <li>3</li>
+  <li>4</li>
+  <li>5</li>
+  <li>6</li>
+  <li>7</li>
+  <li>8</li>
+  <li>8</li>
+  <li>9</li>
+  <li>10</li>
+  <li>11</li>
+  <li>12</li>
+  <li>13</li>
+  <li>14</li>
+  <li>15</li>
+  <li>16</li>
+  <li>17</li>
+  <li>18</li>
+  <li>19</li>
+  <li>20</li>
+  <li>21</li>
+  <li><span class="active">22</span></li>
+  <li>23</li>
+  <li>24</li>
+  <li>25</li>
+  <li>26</li>
+  <li>27</li>
+  <li>28</li>
+  <li>29</li>
+  <li>30</li>
+  <li>31</li>
+</ul>
+  </div>
+</nav>
+
+<div style="position:relative;padding-top:10px;padding-left:300px">
+<h1 style="position:relative left:30px; color:#fff;background-color:#3b945e;font-size:30px"><b >Student Profile</b></h1>
+</div>
+
+
+
+<article style="font-size:20px">
+  <div class="container" >
+  <div class="row">
+    <div class="col-sm-10">
+   <h1 style="position:relative left:30%;font-size:1.5em;color:#154360; font-family: suez one; margin-left:10%; "><b>Student Information</b></h1>
+   </div>
+  </div>
+  <br><br>
+  
+  <div class="row">
+   
+  <div class="col-sm-4" >
+    <label for="firstname">Name :</label> 
+  </div>
+  <div class="col-sm-8">
+    <label for="name" id="sname">Student's name</label> 
+    
+    </div>
+</div>
+  
+  
+  
+  <div class="row">
+   
+  <div class="col-sm-4">
+    <label for="firstname" >Class Roll :</label> 
+     
+    </div>
+  <div class="col-sm-8">
+    <label for="roll" id="sroll">00000000</label> 
+    </div>
+</div>
+  
+  
+  
+  
+   <div class="row">
+   
+  <div class="col-sm-4">
+    <label for="firstname"> Registration No :</label> 
+     
+    </div>
+  <div class="col-sm-8">
+    <label for="roll" id="sreg">00000000000</label> 
+    
+     </div>
+</div>
+  
+  
+
+   <div class="row">
+   
+  <div class="col-sm-4">
+    <label for="firstname">Date of Birth :</label> 
+     
+    </div>
+  <div class="col-sm-8">
+    <label for="roll" id="sdob">1996, 20 August, Tuesday</label> 
+    
+     </div>
+</div>
+  
+   
+
+     <div class="row">
+   
+  <div class="col-sm-4">
+    <label for="firstname">Admission Date :</label> 
+     
+    </div>
+  <div class="col-sm-8">
+    <label for="roll" id="sdoa"> December 27, 2014</label> 
+   
+       </div>
+</div>
+  
+   
+   
+    <div class="row">
+   
+  <div class="col-sm-4">
+    <label for="firstname">CGPA :</label> 
+     
+    </div>
+  <div class="col-sm-8">
+         <label for="roll" id="scgpa"> 3.83</label>     
+   
+      </div>
+</div>
+  
+  
+
+    <div class="row">
+   
+  <div class="col-sm-4">
+    <label for="firstname">Department :</label> 
+     
+    </div>
+  <div class="col-sm-8">
+    <label for="roll" id="sdept">Computer Science And Engineering (CSE)</label> 
+    
+      </div>
+</div>
+
+ 
+    <div class="row">
+   
+  <div class="col-sm-4">
+    <label for="firstname">Program :</label> 
+     
+    </div>
+  <div class="col-sm-8">
+    <label for="roll" id="sprog"> B.Sc. in CSE</label> 
+   
+      </div>
+</div>
+  
+    
+    <div class="row">
+   
+  <div class="col-sm-4">
+    <label for="firstname">Curriculum</label> 
+     
+    </div>
+  <div class="col-sm-8">
+    <label for="roll">2015 B.Sc. in CSE Syllabus</label> 
+    
+      </div>
+</div>
+  
+   
+    <div class="row">
+   
+  <div class="col-sm-4">
+    <label for="firstname">Level-Term :</label> 
+     
+    </div>
+  <div class="col-sm-8">
+    <label for="roll" id="slevel">4-1</label> 
+    
+      </div>
+</div>
+  
+   
+
+    <div class="row">
+   
+  <div class="col-sm-4">
+    <label for="firstname">Dept Batch :</label> 
+     
+    </div>
+  <div class="col-sm-8">
+    <label for="roll" id="sbatch">CSE-15</label> 
+    
+      </div>
+</div>
+</div>
+<br><br><br>
+ 
+    <h1 id="prog" style="font-family: suez one; color: #154360; font-size: 1.3em;"><b>Course Registration Status Bar</b></h1>
+  <div class="container" style="position:relative;padding-left:100px;">
+  <div class="progress" style="width:930px; border: 1px solid black;">
+    <div id="one" class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:0%;background-color:#FF4500">
+      
+    </div>
+  <div id="two" class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:0%;background-color:#328CC1">
+      
+    </div>
+  <div id="three" class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:0%;background-color:#EC576B">
+      
+    </div>
+  <div id="four" class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:0%;background-color:#4EC5C1">
+    </div>
+</div>
+   <ul>
+  <li class="progli" style="padding-left:60px;">Form Fill-up</li>
+  <li class="progli" style="padding-left:100px;">Advisor's Approval</li>
+  <li class="progli" style="padding-left:110px;">Payment</li>
+  <li class="progli" style="padding-left:120px;">Head's Approval</li>
+  </ul>
+  
+  
+</div>
+    
+</article>
+
+<script>
+  
+    checkStudentSession();
+  $(document).ready( function(){
+    
+    console.log("entered student profile");
+    //var user_id = "201514025";  ///log-in fix korle storage theke pabo
+    var user = localStorage.getItem('myUserEntity');
+    user = JSON.parse(user);
+    var uname = user.username;
+    console.log("uname = " + uname);
+    
+    $.ajax({
+        type : 'POST' ,
+        url: '/student/profile?id=' + uname,
+        success: function(data) {
+            console.log('success');
+            console.log(data);
+            var obj = data[0];
+            //console.log(obj.form_submit);
+            console.log(data[1]);
+            
+          
+            var cur = data[1];
+            $("#sname").html(cur.name);
+            $("#sroll").html(cur.sid);
+            $("#sreg").html(cur.reg_no);
+            $("#sdob").html(cur.dob);
+            $("#scgpa").html(cur.cgpa);
+            $("#sdept").html(cur.dept);
+            $("#slevel").html(cur.level + '-' + cur.term);
+            $("#sbatch").html(cur.batch);
+          
+            if (obj === null || obj === "") return;
+            if (obj.form_submit == true) $("#one").css("width", "25%");
+            if (obj.advisor_approval == true) $("#two").css("width", "25%");
+            if (obj.payment == true) $("#three").css("width", "25%");
+            if (obj.head_approval == true) $("#four").css("width", "25%");
+        }
+    });
+    
+    $.ajax({
+          type : 'POST' ,
+          url: '/student/profile/badge?id=' + uname,
+          success: function(data) {
+              console.log('success');
+              console.log(data);
+              if (data.length == 0){
+                $("#bd1").hide();
+              }
+              else{
+                $('.badge1').attr("data-badge",data.length);
+              }
+          }
+      });
+    
+    
+});
+  
+  ///Logout
+  $('#signout').click(function(){
+    console.log("logout clicked");
+    localStorage.clear();
+    window.location.href = "/login";
+  });
+  
+  ///student session check 
+  function checkStudentSession(){
+    var user = localStorage.getItem('myUserEntity');
+    user = JSON.parse(user);
+    if(user === null || user === '') {
+      window.location.href = "/login";
+      return;
+    }
+    if (user.usertype != "student"){
+      window.location.href = '/' + user.usertype + '/profile';
+      return;
+    }
+  }
+  
+</script>
+  
+ 
+  
+  </body>
+</html>
